@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		777310DC21E7E98300409884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310DB21E7E98300409884 /* AppDelegate.swift */; };
-		777310DE21E7E98300409884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310DD21E7E98300409884 /* ViewController.swift */; };
+		777310DE21E7E98300409884 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310DD21E7E98300409884 /* MainViewController.swift */; };
 		777310E121E7E98300409884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777310DF21E7E98300409884 /* Main.storyboard */; };
 		777310E321E7E98600409884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777310E221E7E98600409884 /* Assets.xcassets */; };
 		777310E621E7E98600409884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777310E421E7E98600409884 /* LaunchScreen.storyboard */; };
 		777310F121E7E98600409884 /* Cinema_NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310F021E7E98600409884 /* Cinema_NowTests.swift */; };
+		777310FC21E7E9A600409884 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310FB21E7E9A600409884 /* Constants.swift */; };
+		777310FE21E7E9D300409884 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310FD21E7E9D300409884 /* Service.swift */; };
+		7773110021E7E9EF00409884 /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310FF21E7E9EF00409884 /* ServiceResponse.swift */; };
+		7773110221E7EA2700409884 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110121E7EA2700409884 /* Movie.swift */; };
+		7773110421E7EA3400409884 /* MovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110321E7EA3400409884 /* MovieResults.swift */; };
+		7773110621E7EA7300409884 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110521E7EA7300409884 /* MovieTableViewCell.swift */; };
+		7773110D21E7EC0000409884 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7773110C21E7EC0000409884 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +35,7 @@
 /* Begin PBXFileReference section */
 		777310D821E7E98300409884 /* Cinema Now.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinema Now.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		777310DB21E7E98300409884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		777310DD21E7E98300409884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		777310DD21E7E98300409884 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		777310E021E7E98300409884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		777310E221E7E98600409884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		777310E521E7E98600409884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +43,13 @@
 		777310EC21E7E98600409884 /* Cinema NowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cinema NowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		777310F021E7E98600409884 /* Cinema_NowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema_NowTests.swift; sourceTree = "<group>"; };
 		777310F221E7E98600409884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		777310FB21E7E9A600409884 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		777310FD21E7E9D300409884 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		777310FF21E7E9EF00409884 /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
+		7773110121E7EA2700409884 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		7773110321E7EA3400409884 /* MovieResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResults.swift; sourceTree = "<group>"; };
+		7773110521E7EA7300409884 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		7773110C21E7EC0000409884 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +91,12 @@
 		777310DA21E7E98300409884 /* Cinema Now */ = {
 			isa = PBXGroup;
 			children = (
-				777310DB21E7E98300409884 /* AppDelegate.swift */,
-				777310DD21E7E98300409884 /* ViewController.swift */,
-				777310DF21E7E98300409884 /* Main.storyboard */,
-				777310E221E7E98600409884 /* Assets.xcassets */,
-				777310E421E7E98600409884 /* LaunchScreen.storyboard */,
-				777310E721E7E98600409884 /* Info.plist */,
+				7773110E21E7ECBF00409884 /* Networking */,
+				7773110B21E7EBDB00409884 /* Extensions */,
+				7773110A21E7EBC400409884 /* Utility */,
+				7773110921E7EB9E00409884 /* Model */,
+				7773110821E7EB9B00409884 /* View */,
+				7773110721E7EB9600409884 /* Controller */,
 			);
 			path = "Cinema Now";
 			sourceTree = "<group>";
@@ -94,6 +108,61 @@
 				777310F221E7E98600409884 /* Info.plist */,
 			);
 			path = "Cinema NowTests";
+			sourceTree = "<group>";
+		};
+		7773110721E7EB9600409884 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				777310DD21E7E98300409884 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7773110821E7EB9B00409884 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7773110521E7EA7300409884 /* MovieTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7773110921E7EB9E00409884 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7773110121E7EA2700409884 /* Movie.swift */,
+				7773110321E7EA3400409884 /* MovieResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7773110A21E7EBC400409884 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				777310DB21E7E98300409884 /* AppDelegate.swift */,
+				777310E421E7E98600409884 /* LaunchScreen.storyboard */,
+				777310DF21E7E98300409884 /* Main.storyboard */,
+				777310E221E7E98600409884 /* Assets.xcassets */,
+				777310E721E7E98600409884 /* Info.plist */,
+				7773110C21E7EC0000409884 /* Default-568h@2x.png */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		7773110B21E7EBDB00409884 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7773110E21E7ECBF00409884 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				777310FB21E7E9A600409884 /* Constants.swift */,
+				777310FD21E7E9D300409884 /* Service.swift */,
+				777310FF21E7E9EF00409884 /* ServiceResponse.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				777310E621E7E98600409884 /* LaunchScreen.storyboard in Resources */,
+				7773110D21E7EC0000409884 /* Default-568h@2x.png in Resources */,
 				777310E321E7E98600409884 /* Assets.xcassets in Resources */,
 				777310E121E7E98300409884 /* Main.storyboard in Resources */,
 			);
@@ -197,8 +267,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				777310DE21E7E98300409884 /* ViewController.swift in Sources */,
+				7773110421E7EA3400409884 /* MovieResults.swift in Sources */,
+				777310DE21E7E98300409884 /* MainViewController.swift in Sources */,
+				777310FE21E7E9D300409884 /* Service.swift in Sources */,
+				7773110221E7EA2700409884 /* Movie.swift in Sources */,
 				777310DC21E7E98300409884 /* AppDelegate.swift in Sources */,
+				7773110021E7E9EF00409884 /* ServiceResponse.swift in Sources */,
+				7773110621E7EA7300409884 /* MovieTableViewCell.swift in Sources */,
+				777310FC21E7E9A600409884 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6GUQ7XNWR;
-				INFOPLIST_FILE = "Cinema Now/Info.plist";
+				INFOPLIST_FILE = "Cinema Now/Utility/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6GUQ7XNWR;
-				INFOPLIST_FILE = "Cinema Now/Info.plist";
+				INFOPLIST_FILE = "Cinema Now/Utility/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
