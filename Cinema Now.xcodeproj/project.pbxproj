@@ -20,6 +20,8 @@
 		7773110421E7EA3400409884 /* MovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110321E7EA3400409884 /* MovieResults.swift */; };
 		7773110621E7EA7300409884 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110521E7EA7300409884 /* MovieTableViewCell.swift */; };
 		7773110D21E7EC0000409884 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7773110C21E7EC0000409884 /* Default-568h@2x.png */; };
+		7773111021E810B100409884 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110F21E810B100409884 /* DetailViewController.swift */; };
+		7773111221E822CD00409884 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773111121E822CD00409884 /* VideoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		7773110321E7EA3400409884 /* MovieResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResults.swift; sourceTree = "<group>"; };
 		7773110521E7EA7300409884 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		7773110C21E7EC0000409884 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7773110F21E810B100409884 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7773111121E822CD00409884 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				777310DD21E7E98300409884 /* MainViewController.swift */,
+				7773110F21E810B100409884 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				7773110521E7EA7300409884 /* MovieTableViewCell.swift */,
+				7773111121E822CD00409884 /* VideoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7773111021E810B100409884 /* DetailViewController.swift in Sources */,
 				7773110421E7EA3400409884 /* MovieResults.swift in Sources */,
 				777310DE21E7E98300409884 /* MainViewController.swift in Sources */,
 				777310FE21E7E9D300409884 /* Service.swift in Sources */,
@@ -274,6 +281,7 @@
 				777310DC21E7E98300409884 /* AppDelegate.swift in Sources */,
 				7773110021E7E9EF00409884 /* ServiceResponse.swift in Sources */,
 				7773110621E7EA7300409884 /* MovieTableViewCell.swift in Sources */,
+				7773111221E822CD00409884 /* VideoCollectionViewCell.swift in Sources */,
 				777310FC21E7E9A600409884 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

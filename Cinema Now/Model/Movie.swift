@@ -10,6 +10,7 @@ import Foundation
 
 struct Movie: Codable {
     
+    var poster_path: String?
     let title: String?
     let language: String?
     let backdrop_path: String?
@@ -24,6 +25,7 @@ struct Movie: Codable {
     let id: Int?
     let genre_ids: [Int]?
     let popularity: Double?
+    var vote_average: Double?
 }
 
 struct Dates: Codable {
