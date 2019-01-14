@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var categories = ["", "", "Now Playing", "Trending", "Top Rated"]
+    var categories = ["", "Popular Celebrities", "Now Playing", "Trending", "Top Rated"]
     
     @IBOutlet weak var mainTableView: UITableView! //testing
     
@@ -22,7 +22,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,8 +58,13 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     
-func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.clear 
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = #colorLiteral(red: 0.1538375616, green: 0.1488625407, blue: 0.1489177942, alpha: 1)
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+        header.textLabel?.font = UIFont(name: "Futura", size: 14)
+        
+        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -65,7 +73,7 @@ func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, for
         } else {
            return categories[section]
         }
-       
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -74,6 +82,16 @@ func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, for
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 395
+        }
+        if indexPath.section == 1 {
+            return 90
+        }
+        return 145
     }
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -17,6 +17,7 @@ class UpcomingRow: UITableViewCell {
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
     
     override func awakeFromNib() {
+        
         loadUpcomingData()
     }
     
@@ -90,3 +91,5 @@ extension UpcomingRow: UICollectionViewDataSource {
         return cell
     }
 }
+
+
