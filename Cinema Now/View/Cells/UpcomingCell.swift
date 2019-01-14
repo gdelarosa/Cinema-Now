@@ -14,5 +14,6 @@ class UpcomingCell: UICollectionViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var movieTitle: UILabel!
     
 }

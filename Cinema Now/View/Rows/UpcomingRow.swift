@@ -58,8 +58,6 @@ class UpcomingRow: UITableViewCell {
             }
         }
     }
-    
-    
 }
 
 extension UpcomingRow: UICollectionViewDataSource {
@@ -74,6 +72,7 @@ extension UpcomingRow: UICollectionViewDataSource {
         let movie = movies[indexPath.row]
         
         cell.releaseDate.text = String("Release Date: " + movie.release_date!)
+        cell.movieTitle.text = movie.title!
         
         // set poster image
         if let posterPath = movie.poster_path {
@@ -94,5 +93,7 @@ extension UpcomingRow: UICollectionViewDataSource {
         return cell
     }
 }
+
+
 
 
