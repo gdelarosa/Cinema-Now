@@ -42,7 +42,6 @@ struct Movie: Codable {
     let overview: String?
     let release_date: String?
     
-    //let adult: Bool?
     let video: Bool?
     
     let id: Int?

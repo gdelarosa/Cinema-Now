@@ -29,10 +29,10 @@ class UpcomingRow: UITableViewCell {
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
                     self.movies += movieResults
-                    
                     DispatchQueue.main.async {
                         self.upcomingCollectionView.reloadData()
                     }
+                }
                 }
                 if let totalPages = result?.total_pages, page < totalPages {
                     guard !self.cancelRequest else {

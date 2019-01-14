@@ -51,14 +51,16 @@ class Service {
                 return
             }
             
-            // Make sure that we got a successful response
+            // Response after call
+            // 429: Your request count (#) is over the allowed limit of (40). Might be why the images flicker when loaded. May have to reduce the amount of data we are bringing over.
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
-                
-                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 429, let retryString = httpResponse.allHeaderFields["Retry-After"] as? String, let retry = Int(retryString) {
-                    print("Retry is an int")
-                    sendRetryError("Your request returned a status code of: \(String(describing: (response as? HTTPURLResponse)?.statusCode)) with header fields: \(String(describing: (response as? HTTPURLResponse)?.allHeaderFields))", retryAfter: retry)
+        
+                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 429,
+                    let retryString = httpResponse.allHeaderFields["Retry-After"] as? String,
+                    let retry = Int(retryString) {
+                    sendRetryError("Your request returned a status code of: \(String(describing: (response as? HTTPURLResponse)?.statusCode))", retryAfter: retry)
                 } else {
-                    sendError("Your request returned a status code of: \(String(describing: (response as? HTTPURLResponse)?.statusCode)) with header fields: \(String(describing: (response as? HTTPURLResponse)?.allHeaderFields))")
+                    sendError("Your request returned a status code of: \(String(describing: (response as? HTTPURLResponse)?.statusCode))")
                 }
                 return
             }
@@ -68,14 +70,11 @@ class Service {
                 sendError("No data was returned by the request!")
                 return
             }
-            
             // Return data
             completionHandlerForGET(data, nil)
         }
-        
         // Start the request
         task.resume()
-        
         return task
     }
     
@@ -103,7 +102,7 @@ class Service {
             
             // Check response
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
-                sendError("Your request returned a status code of: \(String(describing: (response as? HTTPURLResponse)?.statusCode)) with header fields: \(String(describing: (response as? HTTPURLResponse)?.allHeaderFields))")
+                sendError("Your request returned a status code of: \(String(describing: (response as? HTTPURLResponse)?.statusCode))")
                 return
             }
             
