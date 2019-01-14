@@ -45,8 +45,11 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
         } else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NowPlayingRow
             return cell
-        } else { 
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NowPlayingRow
+        } else if indexPath.section == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "trendingCell") as! TrendingRow
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "popularCell") as! PopularRow
             return cell
         }
     }

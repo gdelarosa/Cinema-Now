@@ -1,36 +1,35 @@
 //
-//  CategoryRow.swift
+//  PopularRow.swift
 //  Cinema Now
 //
-//  Created by Gina De La Rosa on 1/10/19.
+//  Created by Gina De La Rosa on 1/13/19.
 //  Copyright © 2019 Gina De La Rosa. All rights reserved.
-//  Popular, Trending
+//  Top Rated
 
 import UIKit
 
-class NowPlayingRow : UITableViewCell {
+class PopularRow: UITableViewCell {
     
     let client = Service()
     var movies: [Movie] = []
     var cancelRequest: Bool = false
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var popularCollectionView: UICollectionView!
     
     override func awakeFromNib() {
-       loadNowPlayingData()
+        loadPopularData()
     }
-
     
-    private func loadNowPlayingData(onPage page: Int = 1) {
+    private func loadPopularData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
-        let _ = client.taskForGETMethod(Methods.NOW_PLAYING, parameters: [ParameterKeys.PAGE: page as AnyObject]) { (data, error) in
+        let _ = client.taskForGETMethod(Methods.TOP_RATED, parameters: [ParameterKeys.PAGE: page as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
                     self.movies += movieResults
                     
                     DispatchQueue.main.async {
-                        self.collectionView.reloadData()
+                        self.popularCollectionView.reloadData()
                     }
                 }
                 if let totalPages = result?.total_pages, page < totalPages {
@@ -39,7 +38,7 @@ class NowPlayingRow : UITableViewCell {
                         return
                         
                     }
-                    self.loadNowPlayingData(onPage: page + 1)
+                    self.loadPopularData(onPage: page + 1)
                 }
             } else if let error = error, let retry = error.userInfo["Retry-After"] as? Int {
                 print("Retry after: \(retry) seconds")
@@ -47,7 +46,7 @@ class NowPlayingRow : UITableViewCell {
                     Timer.scheduledTimer(withTimeInterval: Double(retry), repeats: false, block: { (_) in
                         print("Retrying...")
                         guard !self.cancelRequest else { return }
-                        self.loadNowPlayingData(onPage: page)
+                        self.loadPopularData(onPage: page)
                         return
                     })
                 }
@@ -59,7 +58,7 @@ class NowPlayingRow : UITableViewCell {
     }
 }
 
-extension NowPlayingRow : UICollectionViewDataSource {
+extension PopularRow : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
@@ -67,7 +66,7 @@ extension NowPlayingRow : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath) as! NowPlayingCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularCell", for: indexPath) as! PopularCell
         
         let movie = movies[indexPath.row]
         
@@ -90,11 +89,11 @@ extension NowPlayingRow : UICollectionViewDataSource {
         return cell
         
     }
-
+    
 }
 
-extension NowPlayingRow : UICollectionViewDelegateFlowLayout {
-
+extension PopularRow : UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow:CGFloat = 4
         let hardCodedPadding:CGFloat = 5

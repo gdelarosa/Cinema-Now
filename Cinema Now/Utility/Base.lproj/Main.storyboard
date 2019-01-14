@@ -270,6 +270,134 @@
                                             <outlet property="collectionView" destination="ELA-Bc-6Js" id="7iW-Jp-oZ1"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trendingCell" rowHeight="145" id="Gvx-6i-sFX" customClass="TrendingRow" customModule="Cinema_Now" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="584" width="375" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gvx-6i-sFX" id="Psr-zL-kEZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-ng-i1R">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.66666666666666"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="SMi-Eo-GeW">
+                                                        <size key="itemSize" width="109" height="134.5"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="trendingCell" id="xox-uB-aTb" customClass="TrendingCell" customModule="Cinema_Now" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="5" width="109" height="134.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0t-X5-zoJ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.66666666666666"/>
+                                                                    </imageView>
+                                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="tLJ-NS-NW5">
+                                                                        <rect key="frame" x="44" y="57" width="20" height="20"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    </activityIndicatorView>
+                                                                </subviews>
+                                                            </view>
+                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="Y0t-X5-zoJ" secondAttribute="bottom" id="8l2-bt-uFZ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Y0t-X5-zoJ" secondAttribute="trailing" id="gpt-53-niM"/>
+                                                                <constraint firstItem="Y0t-X5-zoJ" firstAttribute="top" secondItem="xox-uB-aTb" secondAttribute="top" id="utZ-Ds-tNL"/>
+                                                                <constraint firstItem="Y0t-X5-zoJ" firstAttribute="leading" secondItem="xox-uB-aTb" secondAttribute="leading" id="yUv-sy-Afp"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="activityIndicator" destination="tLJ-NS-NW5" id="RGG-af-8lN"/>
+                                                                <outlet property="imageView" destination="Y0t-X5-zoJ" id="fYj-Kq-1yL"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="Gvx-6i-sFX" id="SKs-eC-GUw"/>
+                                                        <outlet property="delegate" destination="Gvx-6i-sFX" id="nSP-te-PZE"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LAi-ng-i1R" firstAttribute="top" secondItem="Psr-zL-kEZ" secondAttribute="top" id="XfO-Pm-K5b"/>
+                                                <constraint firstAttribute="bottom" secondItem="LAi-ng-i1R" secondAttribute="bottom" id="eKD-Kz-hly"/>
+                                                <constraint firstAttribute="trailing" secondItem="LAi-ng-i1R" secondAttribute="trailing" id="jfZ-H3-ccm"/>
+                                                <constraint firstItem="LAi-ng-i1R" firstAttribute="leading" secondItem="Psr-zL-kEZ" secondAttribute="leading" id="sNr-gF-fs7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="trendingCollectionView" destination="LAi-ng-i1R" id="mxA-ko-aTz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="popularCell" rowHeight="145" id="ZGn-N6-KJz" customClass="PopularRow" customModule="Cinema_Now" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="729" width="375" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZGn-N6-KJz" id="KT7-8a-c3m">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1o-Su-7Z9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.66666666666666"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="qXB-UA-sMv">
+                                                        <size key="itemSize" width="109" height="134.5"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCell" id="Ada-aj-gUx" customClass="PopularCell" customModule="Cinema_Now" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="5" width="109" height="134.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YUf-Dc-J4g">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.66666666666666"/>
+                                                                    </imageView>
+                                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="cHv-86-myT">
+                                                                        <rect key="frame" x="44" y="57" width="20" height="20"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    </activityIndicatorView>
+                                                                </subviews>
+                                                            </view>
+                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="YUf-Dc-J4g" secondAttribute="trailing" id="6Ua-jx-ohW"/>
+                                                                <constraint firstAttribute="bottom" secondItem="YUf-Dc-J4g" secondAttribute="bottom" id="CrX-Sz-1Ps"/>
+                                                                <constraint firstItem="YUf-Dc-J4g" firstAttribute="top" secondItem="Ada-aj-gUx" secondAttribute="top" id="Nwi-Td-mTe"/>
+                                                                <constraint firstItem="YUf-Dc-J4g" firstAttribute="leading" secondItem="Ada-aj-gUx" secondAttribute="leading" id="g1l-g2-pb4"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="activityIndicator" destination="cHv-86-myT" id="Llb-lL-bZU"/>
+                                                                <outlet property="imageView" destination="YUf-Dc-J4g" id="MzZ-6S-ODs"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="ZGn-N6-KJz" id="XEc-Vf-Ff8"/>
+                                                        <outlet property="delegate" destination="ZGn-N6-KJz" id="JoF-Q5-RCC"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="f1o-Su-7Z9" secondAttribute="trailing" id="4H4-kQ-QLb"/>
+                                                <constraint firstItem="f1o-Su-7Z9" firstAttribute="leading" secondItem="KT7-8a-c3m" secondAttribute="leading" id="HOx-3d-NTV"/>
+                                                <constraint firstAttribute="bottom" secondItem="f1o-Su-7Z9" secondAttribute="bottom" id="WO4-Lv-khr"/>
+                                                <constraint firstItem="f1o-Su-7Z9" firstAttribute="top" secondItem="KT7-8a-c3m" secondAttribute="top" id="xOa-t7-yUu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="popularCollectionView" destination="f1o-Su-7Z9" id="72R-b5-eI2"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="rk1-6O-8sH" id="hHI-Fa-p7b"/>
