@@ -17,7 +17,7 @@ You can install and run the app using Xcode 10+ and Swift 4. You must also obtai
 * MVC archticture 
 
 ### Notes
-This is a fun personal project that is currently ongoing so changes may occur at any moment. I did not give myself a deadline and I have no intention to make this into a full blown app for the app store. I wanted to work on a fun and free API. I was also inspired by the Netflix app and wanted to create a similar UI to that.
+This is a fun personal project that is currently ongoing so changes may occur at any moment. I don't have a deadline but I'd like to have it completed before the end of January. I was inspired by the Netflix app and wanted to create a similar UI with the horizontal scrolling effect on the home screen. 
 
 ### License
 This project is licensed under the MIT License - see the LICENSE.md file for details. 
