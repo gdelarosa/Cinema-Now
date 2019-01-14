@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PopularRow: UITableViewCell {
+class TopRatedRow: UITableViewCell {
     
     let client = Service()
     var movies: [Movie] = []
@@ -58,7 +58,7 @@ class PopularRow: UITableViewCell {
     }
 }
 
-extension PopularRow : UICollectionViewDataSource {
+extension TopRatedRow : UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
@@ -66,7 +66,7 @@ extension PopularRow : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularCell", for: indexPath) as! PopularCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topRatedCell", for: indexPath) as! TopRated
         
         let movie = movies[indexPath.row]
         
@@ -87,12 +87,10 @@ extension PopularRow : UICollectionViewDataSource {
             cell.activityIndicator.stopAnimating()
         }
         return cell
-        
     }
-    
 }
 
-extension PopularRow : UICollectionViewDelegateFlowLayout {
+extension TopRatedRow : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow:CGFloat = 4

@@ -49,7 +49,7 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "trendingCell") as! TrendingRow
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "popularCell") as! PopularRow
+            let cell = tableView.dequeueReusableCell(withIdentifier: "topRatedCell") as! TopRatedRow
             return cell
         }
     }

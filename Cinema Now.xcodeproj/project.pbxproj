@@ -16,8 +16,8 @@
 		7726B3FE21EBF49D003F29AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B3FD21EBF49D003F29AA /* ViewController.swift */; };
 		7726B40421EC2DC9003F29AA /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B40321EC2DC9003F29AA /* TrendingCell.swift */; };
 		7726B40621EC30D6003F29AA /* TrendingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B40521EC30D6003F29AA /* TrendingRow.swift */; };
-		7726B40821EC3285003F29AA /* PopularRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B40721EC3285003F29AA /* PopularRow.swift */; };
-		7726B40A21EC329A003F29AA /* PopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B40921EC329A003F29AA /* PopularCell.swift */; };
+		7726B40821EC3285003F29AA /* TopRatedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B40721EC3285003F29AA /* TopRatedRow.swift */; };
+		7726B40A21EC329A003F29AA /* TopRatedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B40921EC329A003F29AA /* TopRatedCell.swift */; };
 		777310DC21E7E98300409884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310DB21E7E98300409884 /* AppDelegate.swift */; };
 		777310E121E7E98300409884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777310DF21E7E98300409884 /* Main.storyboard */; };
 		777310E321E7E98600409884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777310E221E7E98600409884 /* Assets.xcassets */; };
@@ -53,8 +53,8 @@
 		7726B3FD21EBF49D003F29AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7726B40321EC2DC9003F29AA /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
 		7726B40521EC30D6003F29AA /* TrendingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRow.swift; sourceTree = "<group>"; };
-		7726B40721EC3285003F29AA /* PopularRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularRow.swift; sourceTree = "<group>"; };
-		7726B40921EC329A003F29AA /* PopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCell.swift; sourceTree = "<group>"; };
+		7726B40721EC3285003F29AA /* TopRatedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedRow.swift; sourceTree = "<group>"; };
+		7726B40921EC329A003F29AA /* TopRatedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCell.swift; sourceTree = "<group>"; };
 		777310D821E7E98300409884 /* Cinema Now.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinema Now.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		777310DB21E7E98300409884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		777310E021E7E98300409884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 				7726B3F921EBF3A3003F29AA /* ActorsRow.swift */,
 				7726B3F721EBF3A2003F29AA /* NowPlayingRow.swift */,
 				7726B40521EC30D6003F29AA /* TrendingRow.swift */,
-				7726B40721EC3285003F29AA /* PopularRow.swift */,
+				7726B40721EC3285003F29AA /* TopRatedRow.swift */,
 			);
 			path = Rows;
 			sourceTree = "<group>";
@@ -111,7 +111,7 @@
 				7726B3F321EBF395003F29AA /* ActorCell.swift */,
 				7726B3F221EBF395003F29AA /* NowPlayingCell.swift */,
 				7726B40321EC2DC9003F29AA /* TrendingCell.swift */,
-				7726B40921EC329A003F29AA /* PopularCell.swift */,
+				7726B40921EC329A003F29AA /* TopRatedCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 			files = (
 				7726B3F621EBF395003F29AA /* ActorCell.swift in Sources */,
 				7773111821E8627F00409884 /* Trailer.swift in Sources */,
-				7726B40821EC3285003F29AA /* PopularRow.swift in Sources */,
+				7726B40821EC3285003F29AA /* TopRatedRow.swift in Sources */,
 				7773111021E810B100409884 /* DetailViewController.swift in Sources */,
 				7773110421E7EA3400409884 /* MovieResults.swift in Sources */,
 				777310FE21E7E9D300409884 /* Service.swift in Sources */,
@@ -326,7 +326,7 @@
 				7726B3FB21EBF3A3003F29AA /* UpcomingRow.swift in Sources */,
 				7773110221E7EA2700409884 /* Movie.swift in Sources */,
 				7726B40421EC2DC9003F29AA /* TrendingCell.swift in Sources */,
-				7726B40A21EC329A003F29AA /* PopularCell.swift in Sources */,
+				7726B40A21EC329A003F29AA /* TopRatedCell.swift in Sources */,
 				7726B3FA21EBF3A3003F29AA /* NowPlayingRow.swift in Sources */,
 				777310DC21E7E98300409884 /* AppDelegate.swift in Sources */,
 				7726B3F521EBF395003F29AA /* NowPlayingCell.swift in Sources */,

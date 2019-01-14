@@ -334,7 +334,7 @@
                                             <outlet property="trendingCollectionView" destination="LAi-ng-i1R" id="mxA-ko-aTz"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="popularCell" rowHeight="145" id="ZGn-N6-KJz" customClass="PopularRow" customModule="Cinema_Now" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="topRatedCell" rowHeight="145" id="ZGn-N6-KJz" customClass="TopRatedRow" customModule="Cinema_Now" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="729" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZGn-N6-KJz" id="KT7-8a-c3m">
@@ -351,7 +351,7 @@
                                                         <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCell" id="Ada-aj-gUx" customClass="PopularCell" customModule="Cinema_Now" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="topRatedCell" id="Ada-aj-gUx" customClass="TopRated" customModule="Cinema_Now" customModuleProvider="target">
                                                             <rect key="frame" x="5" y="5" width="109" height="134.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
