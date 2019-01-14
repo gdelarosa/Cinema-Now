@@ -97,7 +97,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r0w-1d-nGj">
-                                                    <rect key="frame" x="-11" y="-65" width="403" height="443"/>
+                                                    <rect key="frame" x="-11" y="-65" width="403" height="462"/>
                                                     <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="uNW-to-WgH">
                                                         <size key="itemSize" width="387" height="425"/>
@@ -107,7 +107,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="upcomingCell" id="zd9-gU-For" customClass="UpcomingCell" customModule="Cinema_Now" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="9" width="387" height="425"/>
+                                                            <rect key="frame" x="5" y="18.666666666666668" width="387" height="425"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="387" height="425"/>
@@ -116,8 +116,20 @@
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FN7-gZ-teY">
                                                                         <rect key="frame" x="0.0" y="0.0" width="387" height="439"/>
                                                                     </imageView>
+                                                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9e-xx-e19">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="387" height="425"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujt-6e-7Qf">
+                                                                        <rect key="frame" x="136" y="383.00000000000006" width="233" height="34"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U6A-Cy-GZF">
-                                                                        <rect key="frame" x="167" y="118" width="37" height="37"/>
+                                                                        <rect key="frame" x="175" y="300" width="37" height="37"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     </activityIndicatorView>
                                                                 </subviews>
@@ -132,6 +144,7 @@
                                                             <connections>
                                                                 <outlet property="activityIndicator" destination="U6A-Cy-GZF" id="Vbu-cc-nwo"/>
                                                                 <outlet property="imageView" destination="FN7-gZ-teY" id="TTb-3l-D3w"/>
+                                                                <outlet property="releaseDate" destination="ujt-6e-7Qf" id="rEG-or-hIT"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -145,7 +158,7 @@
                                                 <constraint firstItem="r0w-1d-nGj" firstAttribute="leading" secondItem="4jg-3m-dSs" secondAttribute="leadingMargin" constant="-26" id="1Qr-YN-HNf"/>
                                                 <constraint firstItem="r0w-1d-nGj" firstAttribute="trailing" secondItem="4jg-3m-dSs" secondAttribute="trailingMargin" constant="32" id="2yJ-Yb-vEm"/>
                                                 <constraint firstItem="r0w-1d-nGj" firstAttribute="top" secondItem="4jg-3m-dSs" secondAttribute="topMargin" constant="-76" id="RT2-vc-bGv"/>
-                                                <constraint firstItem="r0w-1d-nGj" firstAttribute="bottom" secondItem="4jg-3m-dSs" secondAttribute="bottomMargin" constant="11" id="bH2-w1-Ig0"/>
+                                                <constraint firstItem="r0w-1d-nGj" firstAttribute="bottom" secondItem="4jg-3m-dSs" secondAttribute="bottomMargin" constant="30" id="bH2-w1-Ig0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -202,7 +215,7 @@
                                                 </collectionView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="movieCollectionView" destination="Lt3-4n-oFm" id="CIA-tI-vwN"/>
                                         </connections>
@@ -406,7 +419,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jV8-b2-bLI" firstAttribute="top" secondItem="XH5-Va-9tJ" secondAttribute="bottom" id="Aha-gL-hyl"/>
                             <constraint firstAttribute="trailing" secondItem="XH5-Va-9tJ" secondAttribute="trailing" id="BOG-MF-Fo0"/>

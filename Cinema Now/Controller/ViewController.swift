@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewWillDisappear(_ animated: Bool) {
