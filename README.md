@@ -13,7 +13,7 @@ You can install and run the app using Xcode 10+ and Swift 4. You must also obtai
 ### Built With
 * Swift 4
 * Xcode 10.1
-* Storyboards
+* Storyboard + Autolayout
 * MVC archticture 
 
 ### Notes
