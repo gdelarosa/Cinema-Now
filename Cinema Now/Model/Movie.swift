@@ -10,6 +10,7 @@ import Foundation
 
 struct Movie: Codable {
     
+    var profile_path: String?
     var poster_path: String?
     let title: String?
     let language: String?

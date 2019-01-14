@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     
     let client = Service()
     var movies: [Movie] = []
-    var row: CategoryRow!
+    var row: NowPlayingRow!
     
     
     var cancelRequest: Bool = false
@@ -34,18 +34,19 @@ class ViewController: UIViewController {
 extension ViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingCell") as!  UpcomingRow
             return cell
         }
         else if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! MovieRow
+            let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! ActorsRow
             return cell
         } else if indexPath.section == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NowPlayingRow
             return cell
-        } else { // Tested. Will have to show own row info from API
-            let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! MovieRow
+        } else { 
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NowPlayingRow
             return cell
         }
     }

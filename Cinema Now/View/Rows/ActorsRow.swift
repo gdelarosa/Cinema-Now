@@ -1,35 +1,36 @@
 //
-//  UpcomingRow.swift
+//  MovieTableViewCell.swift
 //  Cinema Now
 //
 //  Created by Gina De La Rosa on 1/10/19.
 //  Copyright © 2019 Gina De La Rosa. All rights reserved.
-//
+
 
 import UIKit
 
-class UpcomingRow: UITableViewCell {
+class ActorsRow: UITableViewCell {
     
     let client = Service()
     var movies: [Movie] = []
     var cancelRequest: Bool = false
-    
-    @IBOutlet weak var upcomingCollectionView: UICollectionView!
+
+    @IBOutlet weak var movieCollectionView: UICollectionView!
     
     override func awakeFromNib() {
-        loadUpcomingData()
+        loadTrendingData()
     }
     
-    private func loadUpcomingData(onPage page: Int = 1) {
+    
+    private func loadTrendingData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
-        let _ = client.taskForGETMethod(Methods.UPCOMING, parameters: [ParameterKeys.PAGE: page as AnyObject]) { (data, error) in
+        let _ = client.taskForGETMethod(Methods.POPULAR_ACTORS, parameters: [ParameterKeys.PAGE: page as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
                     self.movies += movieResults
                     
                     DispatchQueue.main.async {
-                        self.upcomingCollectionView.reloadData()
+                        self.movieCollectionView.reloadData()
                     }
                 }
                 if let totalPages = result?.total_pages, page < totalPages {
@@ -38,7 +39,7 @@ class UpcomingRow: UITableViewCell {
                         return
                         
                     }
-                    self.loadUpcomingData(onPage: page + 1)
+                    self.loadTrendingData(onPage: page + 1)
                 }
             } else if let error = error, let retry = error.userInfo["Retry-After"] as? Int {
                 print("Retry after: \(retry) seconds")
@@ -46,7 +47,7 @@ class UpcomingRow: UITableViewCell {
                     Timer.scheduledTimer(withTimeInterval: Double(retry), repeats: false, block: { (_) in
                         print("Retrying...")
                         guard !self.cancelRequest else { return }
-                        self.loadUpcomingData(onPage: page)
+                        self.loadTrendingData(onPage: page)
                         return
                     })
                 }
@@ -56,23 +57,22 @@ class UpcomingRow: UITableViewCell {
             }
         }
     }
-    
-    
 }
 
-extension UpcomingRow: UICollectionViewDataSource {
+extension ActorsRow: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCell", for: indexPath) as! UpcomingCell
-
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as! ActorCell
+        
         let movie = movies[indexPath.row]
         
         // set poster image
-        if let posterPath = movie.poster_path {
+        if let posterPath = movie.profile_path {
             let _ = client.taskForGETImage(ImageKeys.PosterSizes.DETAIL_POSTER, filePath: posterPath, completionHandlerForImage: { (imageData, error) in
                 if let image = UIImage(data: imageData!) {
                     
@@ -90,3 +90,4 @@ extension UpcomingRow: UICollectionViewDataSource {
         return cell
     }
 }
+

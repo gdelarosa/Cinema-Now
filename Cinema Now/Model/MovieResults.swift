@@ -26,15 +26,3 @@ struct MovieResults: Codable {
         }
     }
 }
-//    var pageCount: Int
-//    var currentPage: Int
-//    var results: [Movie]?
-//    var error: Error?
-//
-//    var hasMorePages: Bool {
-//        return currentPage < pageCount
-//    }
-//
-//    var nextPage: Int {
-//        return hasMorePages ? currentPage + 1 : currentPage
-//    }

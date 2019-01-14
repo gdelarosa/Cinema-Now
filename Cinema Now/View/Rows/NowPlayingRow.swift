@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryRow : UITableViewCell {
+class NowPlayingRow : UITableViewCell {
     
     let client = Service()
     var movies: [Movie] = []
@@ -17,7 +17,7 @@ class CategoryRow : UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
-        loadNowPlayingData()
+       loadNowPlayingData()
     }
 
     
@@ -59,39 +59,41 @@ class CategoryRow : UITableViewCell {
     }
 }
 
-extension CategoryRow : UICollectionViewDataSource {
+extension NowPlayingRow : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath) as! VideoCell
+        
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath) as! NowPlayingCell
     
     let movie = movies[indexPath.row]
-    
+   
     // set poster image
     if let posterPath = movie.poster_path {
         let _ = client.taskForGETImage(ImageKeys.PosterSizes.DETAIL_POSTER, filePath: posterPath, completionHandlerForImage: { (imageData, error) in
             if let image = UIImage(data: imageData!) {
                 
                 DispatchQueue.main.async {
-                    //cell.activityIndicator.alpha = 0.0
-                    //cell.activityIndicator.stopAnimating()
+                    cell.activityIndicator.alpha = 0.0
+                    cell.activityIndicator.stopAnimating()
                     cell.imageView.image = image
                 }
             }
         })
     } else {
-    //cell.activityIndicator.alpha = 0.0
-    //cell.activityIndicator.stopAnimating()
+    cell.activityIndicator.alpha = 0.0
+    cell.activityIndicator.stopAnimating()
     }
+  
     return cell
-  }
+    }
 
 }
 
-extension CategoryRow : UICollectionViewDelegateFlowLayout {
+extension NowPlayingRow : UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow:CGFloat = 4

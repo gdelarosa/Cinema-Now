@@ -1,5 +1,5 @@
 //
-//  MovieCell.swift
+//  ActorCell.swift
 //  Cinema Now
 //
 //  Created by Gina De La Rosa on 1/10/19.
@@ -8,9 +8,11 @@
 
 import UIKit
 
-class MovieCell: UICollectionViewCell {
+class ActorCell: UICollectionViewCell {
     
    @IBOutlet weak var imageView: UIImageView!
+   @IBOutlet weak var actorName: UILabel!
+   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         imageView.makeRounded()
