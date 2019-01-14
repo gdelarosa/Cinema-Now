@@ -11,6 +11,5 @@ import UIKit
 class TrendingCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 }

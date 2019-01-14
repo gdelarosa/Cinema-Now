@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     var categories = ["", "Popular Celebrities", "Now Playing", "Trending", "Top Rated"]
     
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController : UITableViewDataSource, UITableViewDelegate {
+extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -104,6 +104,4 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
 //    }
     
 }
-
-
 

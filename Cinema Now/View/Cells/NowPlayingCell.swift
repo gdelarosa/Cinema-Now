@@ -11,6 +11,5 @@ import UIKit
 class NowPlayingCell : UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 }

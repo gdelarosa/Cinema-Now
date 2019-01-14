@@ -59,7 +59,7 @@ class TrendingRow: UITableViewCell {
     }
 }
 
-extension TrendingRow : UICollectionViewDataSource {
+extension TrendingRow: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
@@ -91,6 +91,13 @@ extension TrendingRow : UICollectionViewDataSource {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard movies.count > indexPath.row else { return }
+        let movie = movies[indexPath.row]
+//        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
+//        detailVC.movie = movie
+//        self.showDetailViewController(detailVC, sender: self)
+    }
 }
 
 extension TrendingRow : UICollectionViewDelegateFlowLayout {
