@@ -4,7 +4,7 @@
 //
 //  Created by Gina De La Rosa on 1/10/19.
 //  Copyright © 2019 Gina De La Rosa. All rights reserved.
-//
+//  Might not use, depending on time and if I want to add trailers
 
 import Foundation
 

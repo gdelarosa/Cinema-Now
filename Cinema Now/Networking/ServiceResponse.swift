@@ -9,7 +9,6 @@
 import Foundation
 
 struct ServiceResponse: Codable {
-    
     let results: [Movie]
     let page: Int
     let numPages: Int
