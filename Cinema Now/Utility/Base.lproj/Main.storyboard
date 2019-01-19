@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rk1-6O-8sH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="movieDetail" id="1WA-f8-olI" customClass="DetailViewController" customModule="Cinema_Now" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u0h-Dh-CSU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Gj-mD-RXo">
@@ -69,6 +73,21 @@
             </objects>
             <point key="canvasLocation" x="-361" y="-415"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Ski-Is-X5C">
+            <objects>
+                <viewController id="bpO-2g-YZL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vDw-9W-bnA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YBu-In-Pjl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nC-g7-ULV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1100" y="331"/>
+        </scene>
         <!--Videos-->
         <scene sceneID="0lu-Rx-5xv">
             <objects>
@@ -78,18 +97,18 @@
                         <viewControllerLayoutGuide type="bottom" id="jV8-b2-bLI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rwe-vj-Jo2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="145" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XH5-Va-9tJ">
-                                <rect key="frame" x="0.0" y="-74" width="600" height="674"/>
+                                <rect key="frame" x="0.0" y="-74" width="375" height="741"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="upcomingCell" rowHeight="378" id="VEn-Pm-5jG" customClass="UpcomingRow" customModule="Cinema_Now" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22" width="600" height="378"/>
+                                        <rect key="frame" x="0.0" y="22" width="375" height="378"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VEn-Pm-5jG" id="4jg-3m-dSs">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="378"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r0w-1d-nGj">
@@ -132,7 +151,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U6A-Cy-GZF">
-                                                                        <rect key="frame" x="175" y="300" width="37" height="37"/>
+                                                                        <rect key="frame" x="178" y="234" width="37" height="37"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     </activityIndicatorView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Action • Adventure • Anime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyo-Xg-xyy">
@@ -142,22 +161,6 @@
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtZ-Zf-W5P">
-                                                                        <rect key="frame" x="280" y="102.99999999999996" width="76" height="36"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
-                                                                        <state key="normal" title="TV Shows">
-                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUk-zX-Fgv">
-                                                                        <rect key="frame" x="167" y="100.99999999999996" width="57" height="36"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
-                                                                        <state key="normal" title="Movies">
-                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                    </button>
                                                                 </subviews>
                                                             </view>
                                                             <color key="backgroundColor" red="1" green="0.54633237609999996" blue="0.17167482440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -194,10 +197,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="90" id="Mcr-X5-JoA" customClass="ActorsRow" customModule="Cinema_Now" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="400" width="600" height="90"/>
+                                        <rect key="frame" x="0.0" y="400" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mcr-X5-JoA" id="gUA-MZ-VM9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lt3-4n-oFm">
@@ -248,14 +251,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="145" id="tDa-6V-Ij3" customClass="NowPlayingRow" customModule="Cinema_Now" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="490" width="600" height="145"/>
+                                        <rect key="frame" x="0.0" y="490" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tDa-6V-Ij3" id="7MI-a1-21c">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ELA-Bc-6Js">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
                                                     <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="8pa-NR-p6h">
                                                         <size key="itemSize" width="109" height="134.5"/>
@@ -312,14 +315,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trendingCell" rowHeight="145" id="Gvx-6i-sFX" customClass="TrendingRow" customModule="Cinema_Now" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="635" width="600" height="145"/>
+                                        <rect key="frame" x="0.0" y="635" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gvx-6i-sFX" id="Psr-zL-kEZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-ng-i1R">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
                                                     <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="SMi-Eo-GeW">
                                                         <size key="itemSize" width="109" height="134.5"/>
@@ -376,14 +379,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="topRatedCell" rowHeight="145" id="ZGn-N6-KJz" customClass="TopRatedRow" customModule="Cinema_Now" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="780" width="600" height="145"/>
+                                        <rect key="frame" x="0.0" y="780" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZGn-N6-KJz" id="KT7-8a-c3m">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1o-Su-7Z9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="144.5"/>
                                                     <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="qXB-UA-sMv">
                                                         <size key="itemSize" width="109" height="134.5"/>
@@ -393,7 +396,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="topRatedCell" id="Ada-aj-gUx" customClass="TopRated" customModule="Cinema_Now" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="5.5" width="109" height="134.5"/>
+                                                            <rect key="frame" x="5" y="5" width="109" height="134.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
@@ -445,6 +448,30 @@
                                     <outlet property="delegate" destination="rk1-6O-8sH" id="eeo-Tq-8DJ"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUk-zX-Fgv">
+                                <rect key="frame" x="165" y="39" width="57" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                <state key="normal" title="Movies">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToMovies:" destination="rk1-6O-8sH" eventType="touchUpInside" id="GOF-I2-KaK"/>
+                                    <segue destination="rk1-6O-8sH" kind="show" id="8AT-Uq-WRr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtZ-Zf-W5P">
+                                <rect key="frame" x="286" y="39" width="76" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                <state key="normal" title="TV Shows">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToTv:" destination="rk1-6O-8sH" eventType="touchUpInside" id="Wva-05-kz9"/>
+                                    <segue destination="bpO-2g-YZL" kind="showDetail" id="S43-EN-W2X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -458,6 +485,8 @@
                     <navigationItem key="navigationItem" title="Videos" id="4d8-wG-tiL"/>
                     <connections>
                         <outlet property="mainTableView" destination="XH5-Va-9tJ" id="fTK-QH-SLN"/>
+                        <outlet property="moviesButton" destination="MUk-zX-Fgv" id="8s4-vp-cff"/>
+                        <outlet property="tvShowsButton" destination="GtZ-Zf-W5P" id="QcG-Ka-lWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRW-Nc-BXN" sceneMemberID="firstResponder"/>

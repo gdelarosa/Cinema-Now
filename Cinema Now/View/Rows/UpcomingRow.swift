@@ -15,12 +15,12 @@ class UpcomingRow: UITableViewCell {
     var cancelRequest: Bool = false
     
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
-    
+
     override func awakeFromNib() {
         
         loadUpcomingData()
     }
-   
+    
     private func loadUpcomingData(onPage page: Int = 1) {
         
         guard !cancelRequest else { return }
@@ -29,10 +29,10 @@ class UpcomingRow: UITableViewCell {
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
                     self.movies += movieResults
+                    
                     DispatchQueue.main.async {
                         self.upcomingCollectionView.reloadData()
                     }
-                }
                 }
                 if let totalPages = result?.total_pages, page < totalPages {
                     guard !self.cancelRequest else {
@@ -67,8 +67,8 @@ extension UpcomingRow: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCell", for: indexPath) as! UpcomingCell
-
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCell", for: indexPath) as! UpcomingCell
+        
         let movie = movies[indexPath.row]
         
         cell.releaseDate.text = String("Release Date: " + movie.release_date!)
@@ -93,7 +93,5 @@ extension UpcomingRow: UICollectionViewDataSource {
         return cell
     }
 }
-
-
 
 

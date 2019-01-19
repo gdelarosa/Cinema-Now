@@ -62,6 +62,7 @@ extension TopRatedRow : UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -69,12 +70,12 @@ extension TopRatedRow : UICollectionViewDataSource, UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topRatedCell", for: indexPath) as! TopRated
         
         let movie = movies[indexPath.row]
-        
+
         // set poster image
         if let posterPath = movie.poster_path {
             let _ = client.taskForGETImage(ImageKeys.PosterSizes.DETAIL_POSTER, filePath: posterPath, completionHandlerForImage: { (imageData, error) in
                 if let image = UIImage(data: imageData!) {
-                    
+
                     DispatchQueue.main.async {
                         cell.activityIndicator.alpha = 0.0
                         cell.activityIndicator.stopAnimating()
