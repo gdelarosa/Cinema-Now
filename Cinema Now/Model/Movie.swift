@@ -9,6 +9,7 @@
 import Foundation
 
 enum genre: Int {
+
     case Action = 28
     case Adventure = 12
     case Animation = 16

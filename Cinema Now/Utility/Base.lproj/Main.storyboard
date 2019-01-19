@@ -172,6 +172,7 @@
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="activityIndicator" destination="U6A-Cy-GZF" id="Vbu-cc-nwo"/>
+                                                                <outlet property="genre" destination="Jyo-Xg-xyy" id="sTt-7O-xGD"/>
                                                                 <outlet property="imageView" destination="FN7-gZ-teY" id="TTb-3l-D3w"/>
                                                                 <outlet property="movieTitle" destination="45w-jn-bo2" id="mh2-aD-V1B"/>
                                                                 <outlet property="releaseDate" destination="ujt-6e-7Qf" id="rEG-or-hIT"/>
@@ -382,7 +383,7 @@
                                         <rect key="frame" x="0.0" y="780" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZGn-N6-KJz" id="KT7-8a-c3m">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1o-Su-7Z9">

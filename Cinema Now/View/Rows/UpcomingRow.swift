@@ -26,7 +26,9 @@ class UpcomingRow: UITableViewCell {
         guard !cancelRequest else { return }
         let _ = client.taskForGETMethod(Methods.UPCOMING, parameters: [ParameterKeys.PAGE: page as AnyObject, ParameterKeys.REGION: "US" as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
+                
                 let result = MovieResults.decode(jsonData: jsonData)
+                
                 if let movieResults = result?.results {
                     self.movies += movieResults
                     
@@ -71,8 +73,10 @@ extension UpcomingRow: UICollectionViewDataSource {
         
         let movie = movies[indexPath.row]
         
-        cell.releaseDate.text = String("Release Date: " + movie.release_date!)
+        cell.releaseDate.text = ("Release Date: " + (movie.release_date?.convertDateString())!)
         cell.movieTitle.text = movie.title!
+        // TO-DO: Convert array of Int to String ID
+        cell.genre.text = "\(String(describing: movie.genre_ids))"
         
         // set poster image
         if let posterPath = movie.poster_path {

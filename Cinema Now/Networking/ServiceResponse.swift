@@ -10,6 +10,7 @@ import Foundation
 
 struct ServiceResponse: Codable {
     let results: [Movie]
+    let totalResults: Int
     let page: Int
-    let numPages: Int
+
 }
