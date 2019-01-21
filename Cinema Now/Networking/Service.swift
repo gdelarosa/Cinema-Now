@@ -48,7 +48,6 @@ class Service {
             }
             
             // Response after call
-            // 429: Your request count (#) is over the allowed limit of (40). Might be why the images flicker when loaded. May have to reduce the amount of data we are bringing over.
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
         
                 if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 429,
