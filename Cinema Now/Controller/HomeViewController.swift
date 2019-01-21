@@ -4,15 +4,12 @@ class HomeViewController: UIViewController {
     
     var categories = ["", "Popular Celebrities", "Now Playing", "Trending", "Top Rated"]
     
-    @IBOutlet weak var moviesButton: UIButton!
-    @IBOutlet weak var tvShowsButton: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
     
     // MARK: - Properties
     
     let client = Service()
     var movies: [Movie] = []
-    var row: NowPlayingRow!
     
     var cancelRequest: Bool = false
     
@@ -33,11 +30,6 @@ class HomeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         cancelRequest = true
-    }
-    
-    @IBAction func goToMovies(_ sender: Any) {
-    }
-    @IBAction func goToTv(_ sender: Any) {
     }
     
 }
@@ -101,15 +93,6 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
         }
         return 145
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//            tableView.deselectRow(at: indexPath, animated: true)
-//            guard movies.count > indexPath.row else { return }
-//            let movie = movies[indexPath.row]
-//            guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
-//            detailVC.movie = movie
-//            self.showDetailViewController(detailVC, sender: self)
-//    }
-    
+
 }
 

@@ -26,7 +26,6 @@
 		777310F121E7E98600409884 /* Cinema_NowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310F021E7E98600409884 /* Cinema_NowTests.swift */; };
 		777310FC21E7E9A600409884 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310FB21E7E9A600409884 /* Constants.swift */; };
 		777310FE21E7E9D300409884 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310FD21E7E9D300409884 /* Service.swift */; };
-		7773110021E7E9EF00409884 /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310FF21E7E9EF00409884 /* ServiceResponse.swift */; };
 		7773110221E7EA2700409884 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110121E7EA2700409884 /* Movie.swift */; };
 		7773110421E7EA3400409884 /* MovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110321E7EA3400409884 /* MovieResults.swift */; };
 		7773110D21E7EC0000409884 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7773110C21E7EC0000409884 /* Default-568h@2x.png */; };
@@ -68,7 +67,6 @@
 		777310F221E7E98600409884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		777310FB21E7E9A600409884 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		777310FD21E7E9D300409884 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		777310FF21E7E9EF00409884 /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
 		7773110121E7EA2700409884 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		7773110321E7EA3400409884 /* MovieResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResults.swift; sourceTree = "<group>"; };
 		7773110C21E7EC0000409884 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 			children = (
 				777310FB21E7E9A600409884 /* Constants.swift */,
 				777310FD21E7E9D300409884 /* Service.swift */,
-				777310FF21E7E9EF00409884 /* ServiceResponse.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -336,7 +333,6 @@
 				7726B3FE21EBF49D003F29AA /* HomeViewController.swift in Sources */,
 				775C42B321ED376400722025 /* Extensions.swift in Sources */,
 				7726B3F421EBF395003F29AA /* UpcomingCell.swift in Sources */,
-				7773110021E7E9EF00409884 /* ServiceResponse.swift in Sources */,
 				7726B40621EC30D6003F29AA /* TrendingRow.swift in Sources */,
 				777310FC21E7E9A600409884 /* Constants.swift in Sources */,
 			);

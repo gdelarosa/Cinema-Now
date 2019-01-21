@@ -8,10 +8,6 @@
 
 import Foundation
 
-enum NetworkError: Error {
-    case invalidURL
-}
-
 class Service {
     
     // Shared session

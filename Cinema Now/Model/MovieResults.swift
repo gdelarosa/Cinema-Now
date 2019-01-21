@@ -10,7 +10,6 @@ import Foundation
 
 struct MovieResults: Codable {
     
-    var page: Int?
     var region: String?
     var results: [Movie]?
     var total_pages: Int?
