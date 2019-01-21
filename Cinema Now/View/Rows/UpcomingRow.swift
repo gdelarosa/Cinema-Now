@@ -47,12 +47,13 @@ class UpcomingRow: UITableViewCell {
             } else if let error = error, let retry = error.userInfo["Retry-After"] as? Int {
                 print("Retry after: \(retry) seconds")
                 DispatchQueue.main.async {
-                    Timer.scheduledTimer(withTimeInterval: Double(retry), repeats: false, block: { (_) in
-                        print("Retrying...")
-                        guard !self.cancelRequest else { return }
-                        self.loadUpcomingData(onPage: page)
-                        return
-                    })
+//                    Timer.scheduledTimer(withTimeInterval: Double(retry), repeats: false, block: { (_) in
+//                        print("Retrying...")
+//                        guard !self.cancelRequest else { return }
+//                        self.loadUpcomingData(onPage: page)
+//                        return
+//                    })
+                    self.loadUpcomingData(onPage: page)
                 }
             } else {
                 print("Error code: \(String(describing: error?.code))")

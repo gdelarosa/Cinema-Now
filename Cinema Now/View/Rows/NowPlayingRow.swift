@@ -23,28 +23,33 @@ class NowPlayingRow : UITableViewCell {
     
     private func loadNowPlayingData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
-        let _ = client.taskForGETMethod(Methods.NOW_PLAYING, parameters: [ParameterKeys.PAGE: page as AnyObject]) { (data, error) in
+        let _ = client.taskForGETMethod(Methods.NOW_PLAYING, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
+                    print("Total Now Playing: \(movieResults.count)")
                     self.movies += movieResults
                     
+                    // Reloading data must be used on the main thread
                     DispatchQueue.main.async {
                         self.collectionView.reloadData()
                     }
                 }
-                if let totalPages = result?.total_pages, page < totalPages {
+                if let totalPages = result?.total_pages, totalPages < 10 {
                     guard !self.cancelRequest else {
                         print("Cancel Request Failed")
                         return
-                        
+
                     }
+//                    self.loadNowPlayingData()
                     self.loadNowPlayingData(onPage: page + 1)
                 }
+                
+                
             } else if let error = error, let retry = error.userInfo["Retry-After"] as? Int {
                 print("Retry after: \(retry) seconds")
                 DispatchQueue.main.async {
-                    Timer.scheduledTimer(withTimeInterval: Double(retry), repeats: false, block: { (_) in
+                    Timer.scheduledTimer(withTimeInterval: Double(20), repeats: false, block: { (_) in
                         print("Retrying...")
                         guard !self.cancelRequest else { return }
                         self.loadNowPlayingData(onPage: page)
@@ -59,7 +64,11 @@ class NowPlayingRow : UITableViewCell {
     }
 }
 
-extension NowPlayingRow : UICollectionViewDataSource {
+extension NowPlayingRow : UICollectionViewDataSource, UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count

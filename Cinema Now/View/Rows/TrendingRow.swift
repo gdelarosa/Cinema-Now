@@ -17,24 +17,27 @@ class TrendingRow: UITableViewCell {
     @IBOutlet weak var trendingCollectionView: UICollectionView!
     
     override func awakeFromNib() {
+        self.trendingCollectionView.reloadData()
         loadTrendingData()
     }
     
     
     private func loadTrendingData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
-        let _ = client.taskForGETMethod(Methods.TRENDING_WEEK, parameters: [ParameterKeys.PAGE: page as AnyObject]) { (data, error) in
+        let _ = client.taskForGETMethod(Methods.TRENDING_WEEK, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
+                    print("Total Trending: \(movieResults.count)")
                     self.movies += movieResults
                     
                     DispatchQueue.main.async {
                         self.trendingCollectionView.reloadData()
                     }
                 }
-                if let totalPages = result?.total_pages, page < totalPages {
+                if let totalPages = result?.total_pages, totalPages < 10 {
                     guard !self.cancelRequest else {
+                        print("Total Pages in Trending: \(totalPages)")
                         print("Cancel Request Failed")
                         return
                         
@@ -44,7 +47,7 @@ class TrendingRow: UITableViewCell {
             } else if let error = error, let retry = error.userInfo["Retry-After"] as? Int {
                 print("Retry after: \(retry) seconds")
                 DispatchQueue.main.async {
-                    Timer.scheduledTimer(withTimeInterval: Double(retry), repeats: false, block: { (_) in
+                    Timer.scheduledTimer(withTimeInterval: Double(20), repeats: false, block: { (_) in
                         print("Retrying...")
                         guard !self.cancelRequest else { return }
                         self.loadTrendingData(onPage: page)

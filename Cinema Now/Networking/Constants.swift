@@ -13,17 +13,17 @@ var trailerQualitySettings: [String] = []
 
 struct Api {
     static let BASE_URL = "https://api.themoviedb.org/3"
-    static let KEY = "Insert Your API Key Here"
+    static let KEY = "INSERT YOUR API KEY HERE"
     static let SCHEME = "https"
     static let HOST = "api.themoviedb.org"
     static let PATH = "/3"
-
 }
 
 struct ParameterKeys {
     static let API_KEY = "api_key"
     static let SESSION_ID = "session_id"
     static let PAGE = "page"
+    static let TOTAL_RESULTS = "total_results"
     static let REGION = "region"
 }
 
@@ -45,7 +45,4 @@ struct Methods {
     static let POPULAR_ACTORS = "/person/popular"
 }
 
-struct JSONBodyKeys {
-    static let Results = "results"
-}
 

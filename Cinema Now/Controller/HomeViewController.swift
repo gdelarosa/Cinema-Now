@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainTableView.reloadData()
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {

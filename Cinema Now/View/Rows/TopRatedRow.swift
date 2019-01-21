@@ -17,26 +17,29 @@ class TopRatedRow: UITableViewCell {
     @IBOutlet weak var popularCollectionView: UICollectionView!
     
     override func awakeFromNib() {
+        self.popularCollectionView.reloadData()
         loadPopularData()
     }
     
     private func loadPopularData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
-        let _ = client.taskForGETMethod(Methods.TOP_RATED, parameters: [ParameterKeys.PAGE: page as AnyObject]) { (data, error) in
+        let _ = client.taskForGETMethod(Methods.TOP_RATED, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
+
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
+                    print("Total Top Rated: \(movieResults.count)")
                     self.movies += movieResults
                     
                     DispatchQueue.main.async {
                         self.popularCollectionView.reloadData()
                     }
                 }
-                if let totalPages = result?.total_pages, page < totalPages {
+                if let totalPages = result?.total_pages, totalPages < 10 {
                     guard !self.cancelRequest else {
                         print("Cancel Request Failed")
                         return
-                        
+
                     }
                     self.loadPopularData(onPage: page + 1)
                 }

@@ -23,18 +23,21 @@ class ActorsRow: UITableViewCell {
     
     private func loadTrendingData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
-        let _ = client.taskForGETMethod(Methods.POPULAR_ACTORS, parameters: [ParameterKeys.PAGE: page as AnyObject]) { (data, error) in
+        let _ = client.taskForGETMethod(Methods.POPULAR_ACTORS, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
+                    print("Total Actors: \(movieResults.count)")
                     self.movies += movieResults
+                    
                     
                     DispatchQueue.main.async {
                         self.movieCollectionView.reloadData()
                     }
                 }
-                if let totalPages = result?.total_pages, page < totalPages {
+                if let totalPages = result?.total_pages, totalPages < 10 {
                     guard !self.cancelRequest else {
+                        print("Total Pages Actors: \(totalPages)")
                         print("Cancel Request Failed")
                         return
                         
@@ -44,12 +47,13 @@ class ActorsRow: UITableViewCell {
             } else if let error = error, let retry = error.userInfo["Retry-After"] as? Int {
                 print("Retry after: \(retry) seconds")
                 DispatchQueue.main.async {
-                    Timer.scheduledTimer(withTimeInterval: Double(retry), repeats: false, block: { (_) in
+                    Timer.scheduledTimer(withTimeInterval: Double(20), repeats: false, block: { (_) in
                         print("Retrying...")
                         guard !self.cancelRequest else { return }
-                        self.loadTrendingData(onPage: page)
+                        self.loadTrendingData(onPage: 1)
                         return
                     })
+                   
                 }
             } else {
                 print("Error code: \(String(describing: error?.code))")
@@ -59,7 +63,7 @@ class ActorsRow: UITableViewCell {
     }
 }
 
-extension ActorsRow: UICollectionViewDataSource {
+extension ActorsRow: UICollectionViewDataSource, UICollectionViewDataSourcePrefetching {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
@@ -88,6 +92,13 @@ extension ActorsRow: UICollectionViewDataSource {
             cell.activityIndicator.stopAnimating()
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        // Begin asynchronously fetching data for the requested index paths.
+        for item in indexPaths {
+            print ( "Prefetching Rows: \( item.row)" )
+        }
     }
 }
 
