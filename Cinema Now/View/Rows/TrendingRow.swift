@@ -93,11 +93,14 @@ extension TrendingRow: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard movies.count > indexPath.row else { return }
-//        let movie = movies[indexPath.row]
-//        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
-//        detailVC.movie = movie
-//        self.showDetailViewController(detailVC, sender: self)
+        print("Tapped Cell for Trending")
+        if let mainViewController = parentViewController as? HomeViewController {
+            guard movies.count > indexPath.row else { return }
+            let movie = movies[indexPath.row]
+            guard let detailVC = mainViewController.storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
+            detailVC.movie = movie
+            mainViewController.show(detailVC, sender: self)
+        }
     }
 }
 

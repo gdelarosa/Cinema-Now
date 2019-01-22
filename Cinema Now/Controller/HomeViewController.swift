@@ -2,25 +2,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    //var delegateNow: NowPlayingDelegate?
-    
     var categories = ["", "Popular Celebrities", "Now Playing", "Trending", "Top Rated"]
     
     @IBOutlet weak var mainTableView: UITableView!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToSecondVC" {
-            if segue.destination.isKind(of: DetailViewController.self) {
-                
-                let secondVC = segue.destination as! DetailViewController
-                let indexPath = sender as! IndexPath
-                let movie = movies[indexPath.row]
-                
-                secondVC.movie = movie
-            }
-        }
-    }
-
     
     // MARK: - Properties
     
@@ -50,23 +35,8 @@ class HomeViewController: UIViewController {
     
 }
 
-extension HomeViewController : UITableViewDataSource, UITableViewDelegate, NowPlayingDelegate {    
+extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     
-    //Nothing happens here
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//         guard movies.count > indexPath.row else { return }
-//         let movie = movies[indexPath.row]
-//
-//         guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
-//         detailVC.movie = movie
-//         self.showDetailViewController(detailVC, sender: self)
-
-    }
-    
-    func goToNowPlayingDetail() {
-        print("Make something happen")
-       // performSegue(withIdentifier: "goToSecondVC", sender: )
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -79,7 +49,6 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate, NowPl
             return cell
         } else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NowPlayingRow
-            cell.delegate = self
             return cell
         } else if indexPath.section == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "trendingCell") as! TrendingRow

@@ -51,7 +51,3 @@ struct Movie: Codable {
     var vote_average: Double?
 }
 
-//struct Dates: Codable {
-//    var max: String?
-//    var min: String?
-//}

@@ -333,7 +333,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-ng-i1R">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="144.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                                     <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="SMi-Eo-GeW">
                                                         <size key="itemSize" width="109" height="134.5"/>
@@ -343,7 +343,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="trendingCell" id="xox-uB-aTb" customClass="TrendingCell" customModule="Cinema_Now" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="5" width="109" height="134.5"/>
+                                                            <rect key="frame" x="5" y="5.5" width="109" height="134.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
@@ -397,7 +397,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1o-Su-7Z9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="144.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
                                                     <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="qXB-UA-sMv">
                                                         <size key="itemSize" width="109" height="134.5"/>

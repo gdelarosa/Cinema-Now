@@ -62,7 +62,7 @@ class ActorsRow: UITableViewCell {
     }
 }
 
-extension ActorsRow: UICollectionViewDataSource, UICollectionViewDataSourcePrefetching {
+extension ActorsRow: UICollectionViewDataSource, UICollectionViewDataSourcePrefetching, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
@@ -97,6 +97,17 @@ extension ActorsRow: UICollectionViewDataSource, UICollectionViewDataSourcePrefe
         // Begin asynchronously fetching data for the requested index paths.
         for item in indexPaths {
             print ( "Prefetching Rows: \( item.row)" )
+        }
+    }
+    // Need to get data for celebs
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Tapped Cell for Celebrities")
+        if let mainViewController = parentViewController as? HomeViewController {
+            guard movies.count > indexPath.row else { return }
+            let movie = movies[indexPath.row]
+            guard let detailVC = mainViewController.storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
+            detailVC.movie = movie
+            mainViewController.show(detailVC, sender: self)
         }
     }
 }

@@ -4,13 +4,13 @@
 //
 //  Created by Gina De La Rosa on 1/10/19.
 //  Copyright © 2019 Gina De La Rosa. All rights reserved.
-//  Popular, Trending
+//  Now Playing
 
 import UIKit
 
-protocol NowPlayingDelegate {
-    func goToNowPlayingDetail()
-}
+//protocol NowPlayingDelegate {
+//    func goToNowPlayingDetail(data: Movie)
+//}
 
 class NowPlayingRow : UITableViewCell {
     
@@ -18,7 +18,7 @@ class NowPlayingRow : UITableViewCell {
     var movies: [Movie] = []
     var cancelRequest: Bool = false
     
-    var delegate: NowPlayingDelegate?
+   // var delegate: NowPlayingDelegate?
 
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -69,12 +69,19 @@ class NowPlayingRow : UITableViewCell {
     }
 }
 
-extension NowPlayingRow : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching{
+extension NowPlayingRow: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        
         print("Tapped Cell for Now Playing")
-        self.delegate?.goToNowPlayingDetail()
+        
+        if let mainViewController = parentViewController as? HomeViewController {
+            guard movies.count > indexPath.row else { return }
+            let movie = movies[indexPath.row]
+            guard let detailVC = mainViewController.storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
+            detailVC.movie = movie
+            mainViewController.show(detailVC, sender: self)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {

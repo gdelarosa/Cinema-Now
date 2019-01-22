@@ -47,12 +47,6 @@ class UpcomingRow: UITableViewCell {
             } else if let error = error, let retry = error.userInfo["Retry-After"] as? Int {
                 print("Retry after: \(retry) seconds")
                 DispatchQueue.main.async {
-//                    Timer.scheduledTimer(withTimeInterval: Double(retry), repeats: false, block: { (_) in
-//                        print("Retrying...")
-//                        guard !self.cancelRequest else { return }
-//                        self.loadUpcomingData(onPage: page)
-//                        return
-//                    })
                     self.loadUpcomingData(onPage: page)
                 }
             } else {
@@ -63,7 +57,18 @@ class UpcomingRow: UITableViewCell {
     }
 }
 
-extension UpcomingRow: UICollectionViewDataSource {
+extension UpcomingRow: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Tapped Cell for Upcoming")
+        if let mainViewController = parentViewController as? HomeViewController {
+            guard movies.count > indexPath.row else { return }
+            let movie = movies[indexPath.row]
+            guard let detailVC = mainViewController.storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
+            detailVC.movie = movie
+            mainViewController.show(detailVC, sender: self)
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
@@ -80,8 +85,8 @@ extension UpcomingRow: UICollectionViewDataSource {
         cell.genre.text = "\(String(describing: movie.genre_ids))"
         
         // set poster image
-        if let posterPath = movie.poster_path {
-            let _ = client.taskForGETImage(ImageKeys.PosterSizes.DETAIL_POSTER, filePath: posterPath, completionHandlerForImage: { (imageData, error) in
+        if let posterPath = movie.backdrop_path {
+            let _ = client.taskForGETImage(ImageKeys.PosterSizes.BACK_DROP, filePath: posterPath, completionHandlerForImage: { (imageData, error) in
                 if let image = UIImage(data: imageData!) {
                     
                     DispatchQueue.main.async {

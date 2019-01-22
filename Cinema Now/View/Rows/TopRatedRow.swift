@@ -91,6 +91,17 @@ extension TopRatedRow : UICollectionViewDataSource, UICollectionViewDelegate {
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Tapped Cell for Top Rated")
+        if let mainViewController = parentViewController as? HomeViewController {
+            guard movies.count > indexPath.row else { return }
+            let movie = movies[indexPath.row]
+            guard let detailVC = mainViewController.storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
+            detailVC.movie = movie
+            mainViewController.show(detailVC, sender: self)
+        }
+    }
 }
 
 extension TopRatedRow : UICollectionViewDelegateFlowLayout {
