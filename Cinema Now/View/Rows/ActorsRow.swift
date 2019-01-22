@@ -20,7 +20,6 @@ class ActorsRow: UITableViewCell {
         loadTrendingData()
     }
     
-    
     private func loadTrendingData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
         let _ = client.taskForGETMethod(Methods.POPULAR_ACTORS, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in
@@ -105,10 +104,12 @@ extension ActorsRow: UICollectionViewDataSource, UICollectionViewDataSourcePrefe
         if let mainViewController = parentViewController as? HomeViewController {
             guard movies.count > indexPath.row else { return }
             let movie = movies[indexPath.row]
-            guard let detailVC = mainViewController.storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
+            guard let detailVC = mainViewController.storyboard?.instantiateViewController(withIdentifier: "actorDetail") as? ActorDetailViewController else { return }
             detailVC.movie = movie
             mainViewController.show(detailVC, sender: self)
         }
     }
 }
+
+
 

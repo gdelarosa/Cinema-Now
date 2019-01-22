@@ -36,7 +36,6 @@ struct Movie: Codable {
     var profile_path: String?
     var poster_path: String?
     let title: String?
-    //let language: String?
     let backdrop_path: String?
     
     let poster: String?

@@ -1,5 +1,5 @@
 # Cinema-Now
-An iOS app for movies using the The Movie DB API. 
+🎥 📱 🎞  
 
 <img width="443" alt="screen shot 2019-01-13 at 11 27 34 pm" src="https://user-images.githubusercontent.com/9616943/51100688-04820180-178c-11e9-9b6a-f5bdd5edc767.png">
 

@@ -65,7 +65,7 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
         view.tintColor = #colorLiteral(red: 0.1538375616, green: 0.1488625407, blue: 0.1489177942, alpha: 1)
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
-        header.textLabel?.font = UIFont(name: "Futura", size: 14)
+        header.textLabel?.font = UIFont(name: "Mosk Normal 400", size: 14)
         
         
     }

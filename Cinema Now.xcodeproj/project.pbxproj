@@ -32,6 +32,17 @@
 		7773111021E810B100409884 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110F21E810B100409884 /* DetailViewController.swift */; };
 		7773111821E8627F00409884 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773111721E8627F00409884 /* Trailer.swift */; };
 		777972D921F6E40800C16474 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777972D821F6E40800C16474 /* Actor.swift */; };
+		77BC64E121F7B4F900F97F97 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BC64E021F7B4F900F97F97 /* CircularProgressView.swift */; };
+		77BC64E321F7BC2000F97F97 /* ActorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BC64E221F7BC2000F97F97 /* ActorDetailViewController.swift */; };
+		77BC64EE21F7CA2500F97F97 /* Mosk Bold 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64EC21F7C97B00F97F97 /* Mosk Bold 700.ttf */; };
+		77BC64EF21F7CA2800F97F97 /* Mosk Extra-Bold 800.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64E721F7C97B00F97F97 /* Mosk Extra-Bold 800.ttf */; };
+		77BC64F021F7CA2A00F97F97 /* Mosk Light 300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64E921F7C97B00F97F97 /* Mosk Light 300.ttf */; };
+		77BC64F121F7CA2C00F97F97 /* Mosk Extra-Light 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64EB21F7C97B00F97F97 /* Mosk Extra-Light 200.ttf */; };
+		77BC64F221F7CA2E00F97F97 /* Mosk Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64E821F7C97B00F97F97 /* Mosk Medium 500.ttf */; };
+		77BC64F321F7CA3000F97F97 /* Mosk Normal 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64E521F7C97B00F97F97 /* Mosk Normal 400.ttf */; };
+		77BC64F421F7CA3200F97F97 /* Mosk Semi-Bold 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64E621F7C97B00F97F97 /* Mosk Semi-Bold 600.ttf */; };
+		77BC64F521F7CA3500F97F97 /* Mosk Thin 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64EA21F7C97B00F97F97 /* Mosk Thin 100.ttf */; };
+		77BC64F621F7CA3700F97F97 /* Mosk Ultra-Bold 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64ED21F7C97B00F97F97 /* Mosk Ultra-Bold 900.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +85,17 @@
 		7773110F21E810B100409884 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7773111721E8627F00409884 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		777972D821F6E40800C16474 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		77BC64E021F7B4F900F97F97 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		77BC64E221F7BC2000F97F97 /* ActorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailViewController.swift; sourceTree = "<group>"; };
+		77BC64E521F7C97B00F97F97 /* Mosk Normal 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Normal 400.ttf"; sourceTree = "<group>"; };
+		77BC64E621F7C97B00F97F97 /* Mosk Semi-Bold 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Semi-Bold 600.ttf"; sourceTree = "<group>"; };
+		77BC64E721F7C97B00F97F97 /* Mosk Extra-Bold 800.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Extra-Bold 800.ttf"; sourceTree = "<group>"; };
+		77BC64E821F7C97B00F97F97 /* Mosk Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Medium 500.ttf"; sourceTree = "<group>"; };
+		77BC64E921F7C97B00F97F97 /* Mosk Light 300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Light 300.ttf"; sourceTree = "<group>"; };
+		77BC64EA21F7C97B00F97F97 /* Mosk Thin 100.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Thin 100.ttf"; sourceTree = "<group>"; };
+		77BC64EB21F7C97B00F97F97 /* Mosk Extra-Light 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Extra-Light 200.ttf"; sourceTree = "<group>"; };
+		77BC64EC21F7C97B00F97F97 /* Mosk Bold 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Bold 700.ttf"; sourceTree = "<group>"; };
+		77BC64ED21F7C97B00F97F97 /* Mosk Ultra-Bold 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Ultra-Bold 900.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +161,7 @@
 		777310DA21E7E98300409884 /* Cinema Now */ = {
 			isa = PBXGroup;
 			children = (
+				77BC64E421F7C96E00F97F97 /* Font */,
 				7773110E21E7ECBF00409884 /* Networking */,
 				7773110B21E7EBDB00409884 /* Extensions */,
 				7773110A21E7EBC400409884 /* Utility */,
@@ -163,6 +186,7 @@
 			children = (
 				7726B3FD21EBF49D003F29AA /* HomeViewController.swift */,
 				7773110F21E810B100409884 /* DetailViewController.swift */,
+				77BC64E221F7BC2000F97F97 /* ActorDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,6 +214,7 @@
 		7773110A21E7EBC400409884 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				77BC64E021F7B4F900F97F97 /* CircularProgressView.swift */,
 				777310DB21E7E98300409884 /* AppDelegate.swift */,
 				777310E421E7E98600409884 /* LaunchScreen.storyboard */,
 				777310DF21E7E98300409884 /* Main.storyboard */,
@@ -215,6 +240,22 @@
 				777310FD21E7E9D300409884 /* Service.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		77BC64E421F7C96E00F97F97 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				77BC64EC21F7C97B00F97F97 /* Mosk Bold 700.ttf */,
+				77BC64E721F7C97B00F97F97 /* Mosk Extra-Bold 800.ttf */,
+				77BC64EB21F7C97B00F97F97 /* Mosk Extra-Light 200.ttf */,
+				77BC64E921F7C97B00F97F97 /* Mosk Light 300.ttf */,
+				77BC64E821F7C97B00F97F97 /* Mosk Medium 500.ttf */,
+				77BC64E521F7C97B00F97F97 /* Mosk Normal 400.ttf */,
+				77BC64E621F7C97B00F97F97 /* Mosk Semi-Bold 600.ttf */,
+				77BC64EA21F7C97B00F97F97 /* Mosk Thin 100.ttf */,
+				77BC64ED21F7C97B00F97F97 /* Mosk Ultra-Bold 900.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +339,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77BC64EE21F7CA2500F97F97 /* Mosk Bold 700.ttf in Resources */,
+				77BC64F121F7CA2C00F97F97 /* Mosk Extra-Light 200.ttf in Resources */,
+				77BC64F621F7CA3700F97F97 /* Mosk Ultra-Bold 900.ttf in Resources */,
+				77BC64F321F7CA3000F97F97 /* Mosk Normal 400.ttf in Resources */,
+				77BC64EF21F7CA2800F97F97 /* Mosk Extra-Bold 800.ttf in Resources */,
 				777310E621E7E98600409884 /* LaunchScreen.storyboard in Resources */,
 				7773110D21E7EC0000409884 /* Default-568h@2x.png in Resources */,
+				77BC64F421F7CA3200F97F97 /* Mosk Semi-Bold 600.ttf in Resources */,
+				77BC64F521F7CA3500F97F97 /* Mosk Thin 100.ttf in Resources */,
 				777310E321E7E98600409884 /* Assets.xcassets in Resources */,
 				777310E121E7E98300409884 /* Main.storyboard in Resources */,
+				77BC64F021F7CA2A00F97F97 /* Mosk Light 300.ttf in Resources */,
+				77BC64F221F7CA2E00F97F97 /* Mosk Medium 500.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,8 +379,10 @@
 				7726B3FB21EBF3A3003F29AA /* UpcomingRow.swift in Sources */,
 				7773110221E7EA2700409884 /* Movie.swift in Sources */,
 				7726B40421EC2DC9003F29AA /* TrendingCell.swift in Sources */,
+				77BC64E121F7B4F900F97F97 /* CircularProgressView.swift in Sources */,
 				7726B40A21EC329A003F29AA /* TopRatedCell.swift in Sources */,
 				7726B3FA21EBF3A3003F29AA /* NowPlayingRow.swift in Sources */,
+				77BC64E321F7BC2000F97F97 /* ActorDetailViewController.swift in Sources */,
 				777310DC21E7E98300409884 /* AppDelegate.swift in Sources */,
 				7726B3F521EBF395003F29AA /* NowPlayingCell.swift in Sources */,
 				7726B3FE21EBF49D003F29AA /* HomeViewController.swift in Sources */,
