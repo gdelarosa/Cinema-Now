@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIE-Wn-eAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-361" y="-415"/>
+            <point key="canvasLocation" x="-148" y="-405"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ski-Is-X5C">
@@ -393,7 +393,7 @@
                                         <rect key="frame" x="0.0" y="780" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZGn-N6-KJz" id="KT7-8a-c3m">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1o-Su-7Z9">
@@ -494,6 +494,7 @@
                     <navigationItem key="navigationItem" title="Videos" id="4d8-wG-tiL"/>
                     <connections>
                         <outlet property="mainTableView" destination="XH5-Va-9tJ" id="fTK-QH-SLN"/>
+                        <segue destination="1WA-f8-olI" kind="show" identifier="goToSecondVC" id="l3w-y3-Tam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRW-Nc-BXN" sceneMemberID="firstResponder"/>

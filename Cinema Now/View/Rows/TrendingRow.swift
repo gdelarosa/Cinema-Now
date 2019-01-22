@@ -28,7 +28,6 @@ class TrendingRow: UITableViewCell {
             if error == nil, let jsonData = data {
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
-                    print("Total Trending: \(movieResults.count)")
                     self.movies += movieResults
                     
                     DispatchQueue.main.async {
@@ -37,7 +36,6 @@ class TrendingRow: UITableViewCell {
                 }
                 if let totalPages = result?.total_pages, totalPages < 10 {
                     guard !self.cancelRequest else {
-                        print("Total Pages in Trending: \(totalPages)")
                         print("Cancel Request Failed")
                         return
                         
@@ -95,8 +93,8 @@ extension TrendingRow: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard movies.count > indexPath.row else { return }
-        let movie = movies[indexPath.row]
+//        guard movies.count > indexPath.row else { return }
+//        let movie = movies[indexPath.row]
 //        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
 //        detailVC.movie = movie
 //        self.showDetailViewController(detailVC, sender: self)

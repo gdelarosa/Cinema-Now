@@ -28,7 +28,6 @@ class TopRatedRow: UITableViewCell {
 
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
-                    print("Total Top Rated: \(movieResults.count)")
                     self.movies += movieResults
                     
                     DispatchQueue.main.async {

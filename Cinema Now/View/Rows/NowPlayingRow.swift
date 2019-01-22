@@ -8,18 +8,24 @@
 
 import UIKit
 
+protocol NowPlayingDelegate {
+    func goToNowPlayingDetail()
+}
+
 class NowPlayingRow : UITableViewCell {
     
     let client = Service()
     var movies: [Movie] = []
     var cancelRequest: Bool = false
     
+    var delegate: NowPlayingDelegate?
+
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
        loadNowPlayingData()
     }
-
     
     private func loadNowPlayingData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
@@ -27,7 +33,7 @@ class NowPlayingRow : UITableViewCell {
             if error == nil, let jsonData = data {
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
-                    print("Total Now Playing: \(movieResults.count)")
+                 
                     self.movies += movieResults
                     
                     // Reloading data must be used on the main thread
@@ -41,7 +47,6 @@ class NowPlayingRow : UITableViewCell {
                         return
 
                     }
-//                    self.loadNowPlayingData()
                     self.loadNowPlayingData(onPage: page + 1)
                 }
                 
@@ -64,7 +69,14 @@ class NowPlayingRow : UITableViewCell {
     }
 }
 
-extension NowPlayingRow : UICollectionViewDataSource, UICollectionViewDataSourcePrefetching {
+extension NowPlayingRow : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        print("Tapped Cell for Now Playing")
+        self.delegate?.goToNowPlayingDetail()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         
     }

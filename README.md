@@ -11,7 +11,7 @@ An iOS app for movies using the The Movie DB API.
 You can install and run the app using Xcode 10+ and Swift 4. You must also obtain your own API Key from TMDB site. 
 
 ### Built With
-* Swift 4
+* Swift 4.2
 * Xcode 10.1
 * Storyboard + Autolayout
 * MVC archticture 
