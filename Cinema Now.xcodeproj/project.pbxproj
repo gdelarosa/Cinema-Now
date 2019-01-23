@@ -43,6 +43,7 @@
 		77BC64F421F7CA3200F97F97 /* Mosk Semi-Bold 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64E621F7C97B00F97F97 /* Mosk Semi-Bold 600.ttf */; };
 		77BC64F521F7CA3500F97F97 /* Mosk Thin 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64EA21F7C97B00F97F97 /* Mosk Thin 100.ttf */; };
 		77BC64F621F7CA3700F97F97 /* Mosk Ultra-Bold 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64ED21F7C97B00F97F97 /* Mosk Ultra-Bold 900.ttf */; };
+		77BC64F821F91CB800F97F97 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BC64F721F91CB800F97F97 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		77BC64EB21F7C97B00F97F97 /* Mosk Extra-Light 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Extra-Light 200.ttf"; sourceTree = "<group>"; };
 		77BC64EC21F7C97B00F97F97 /* Mosk Bold 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Bold 700.ttf"; sourceTree = "<group>"; };
 		77BC64ED21F7C97B00F97F97 /* Mosk Ultra-Bold 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Ultra-Bold 900.ttf"; sourceTree = "<group>"; };
+		77BC64F721F91CB800F97F97 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				7726B3FD21EBF49D003F29AA /* HomeViewController.swift */,
 				7773110F21E810B100409884 /* DetailViewController.swift */,
 				77BC64E221F7BC2000F97F97 /* ActorDetailViewController.swift */,
+				77BC64F721F91CB800F97F97 /* AboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				7726B40621EC30D6003F29AA /* TrendingRow.swift in Sources */,
 				777310FC21E7E9A600409884 /* Constants.swift in Sources */,
 				777972D921F6E40800C16474 /* Actor.swift in Sources */,
+				77BC64F821F91CB800F97F97 /* AboutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

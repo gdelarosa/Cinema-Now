@@ -18,7 +18,6 @@ extension UIImageView {
         self.layer.masksToBounds = true
     }
 }
-
 // Converts String to Date
 extension String {
     
@@ -42,7 +41,6 @@ extension String {
         return nil
     }
 }
-
 // Assists with pushing data to detail view controller
 extension UIView {
     var parentViewController: UIViewController? {
@@ -56,3 +54,4 @@ extension UIView {
         return nil
     }
 }
+
