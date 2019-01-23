@@ -24,6 +24,7 @@ class UpcomingRow: UITableViewCell {
     private func loadUpcomingData(onPage page: Int = 1) {
         
         guard !cancelRequest else { return }
+        
         let _ = client.taskForGETMethod(Methods.UPCOMING, parameters: [ParameterKeys.PAGE: page as AnyObject, ParameterKeys.REGION: "US" as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
                 

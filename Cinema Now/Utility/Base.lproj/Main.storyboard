@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rk1-6O-8sH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NwV-Ib-XZF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,6 +12,9 @@
     <customFonts key="customFonts">
         <array key="Mosk Extra-Bold 800.ttf">
             <string>MoskExtra-Bold800</string>
+        </array>
+        <array key="Mosk Medium 500.ttf">
+            <string>MoskMedium500</string>
         </array>
         <array key="Mosk Normal 400.ttf">
             <string>MoskNormal400</string>
@@ -42,7 +45,7 @@
                                 <rect key="frame" x="9" y="82" width="152" height="218"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Hc-WA-ScX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Hc-WA-ScX">
                                 <rect key="frame" x="16" y="308" width="343" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MoskSemi-Bold600" family="Mosk" pointSize="21"/>
@@ -50,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EW5-QQ-Znj">
-                                <rect key="frame" x="16" y="348" width="343" height="159"/>
+                                <rect key="frame" x="16" y="372" width="343" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,6 +82,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" fixedFrame="YES" text="Release Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6yZ-ci-Rq0">
+                                <rect key="frame" x="16" y="340" width="343" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MoskMedium500" family="Mosk" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="J9w-te-XVK"/>
@@ -89,37 +99,68 @@
                         <outlet property="moviePosterImage" destination="nvI-UO-QJ6" id="Lwv-rd-YI1"/>
                         <outlet property="overviewDetail" destination="EW5-QQ-Znj" id="hZ5-eS-vSY"/>
                         <outlet property="ratingLabel" destination="b8A-aj-cTs" id="STB-y7-bya"/>
+                        <outlet property="releaseDate" destination="6yZ-ci-Rq0" id="RmA-jS-92h"/>
                         <outlet property="titleLabel" destination="5Hc-WA-ScX" id="9I9-ju-cYT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIE-Wn-eAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-412" y="-416"/>
+            <point key="canvasLocation" x="-967" y="294"/>
         </scene>
-        <!--View Controller-->
+        <!--TV-->
         <scene sceneID="Ski-Is-X5C">
             <objects>
                 <viewController id="bpO-2g-YZL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vDw-9W-bnA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLD-oQ-wsX">
-                                <rect key="frame" x="16" y="47" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="rk1-6O-8sH" kind="show" id="Pdx-lU-yU1"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YBu-In-Pjl"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="TV" image="TV" id="HIo-V9-fYT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nC-g7-ULV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1146" y="385"/>
+            <point key="canvasLocation" x="-310" y="-448"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="yzg-H0-nOp">
+            <objects>
+                <viewController id="5Om-ca-WCr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hao-LX-bxW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search for movies" translatesAutoresizingMaskIntoConstraints="NO" id="qXu-tp-xoJ">
+                                <rect key="frame" x="0.0" y="43" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="37I-Es-aOb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="vNC-sl-eRv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TdK-bT-ug8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="-448"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="cKC-wx-OuH">
+            <objects>
+                <viewController id="ffJ-0R-iQT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8PQ-cm-Eup">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Qqk-yA-psc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="info" id="nwG-xX-zRN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ML2-2S-PAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="-448"/>
         </scene>
         <!--Actor Detail View Controller-->
         <scene sceneID="1Hp-JM-9km">
@@ -151,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVD-aZ-GNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231.19999999999999" y="252.32383808095955"/>
+            <point key="canvasLocation" x="-311" y="294"/>
         </scene>
         <!--Videos-->
         <scene sceneID="0lu-Rx-5xv">
@@ -166,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="145" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XH5-Va-9tJ">
-                                <rect key="frame" x="0.0" y="-74" width="375" height="741"/>
+                                <rect key="frame" x="0.0" y="-74" width="375" height="692"/>
                                 <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="upcomingCell" rowHeight="378" id="VEn-Pm-5jG" customClass="UpcomingRow" customModule="Cinema_Now" customModuleProvider="target">
@@ -249,28 +290,6 @@
                                                         <outlet property="delegate" destination="VEn-Pm-5jG" id="QRI-lC-ehj"/>
                                                     </connections>
                                                 </collectionView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtZ-Zf-W5P">
-                                                    <rect key="frame" x="286" y="73" width="76" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
-                                                    <state key="normal" title="TV Shows">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="bpO-2g-YZL" kind="showDetail" id="S43-EN-W2X"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUk-zX-Fgv">
-                                                    <rect key="frame" x="166" y="73" width="57" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
-                                                    <state key="normal" title="Movies">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="rk1-6O-8sH" kind="showDetail" id="8AT-Uq-WRr"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="r0w-1d-nGj" firstAttribute="leading" secondItem="4jg-3m-dSs" secondAttribute="leadingMargin" constant="-26" id="1Qr-YN-HNf"/>
@@ -475,7 +494,7 @@
                                         <rect key="frame" x="0.0" y="780" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZGn-N6-KJz" id="KT7-8a-c3m">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1o-Su-7Z9">
@@ -551,6 +570,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xTW-Ws-61Z"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Movies" image="film-reel" id="VE9-hw-MQc">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Videos" id="4d8-wG-tiL"/>
                     <connections>
                         <outlet property="mainTableView" destination="XH5-Va-9tJ" id="fTK-QH-SLN"/>
@@ -558,11 +580,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRW-Nc-BXN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1100" y="-416.0419790104948"/>
+            <point key="canvasLocation" x="-967" y="-448"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="haX-W1-XaE">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="NwV-Ib-XZF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YaU-UG-Y3a">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rk1-6O-8sH" kind="relationship" relationship="viewControllers" id="MdQ-ax-YvE"/>
+                        <segue destination="bpO-2g-YZL" kind="relationship" relationship="viewControllers" id="bUL-61-Yry"/>
+                        <segue destination="5Om-ca-WCr" kind="relationship" relationship="viewControllers" id="uG9-kB-Mi9"/>
+                        <segue destination="ffJ-0R-iQT" kind="relationship" relationship="viewControllers" id="s4o-on-nul"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3o-qH-ufD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1762" y="-447"/>
         </scene>
     </scenes>
     <resources>
+        <image name="TV" width="25" height="25"/>
         <image name="Triangle" width="891" height="355"/>
         <image name="back" width="10" height="20"/>
+        <image name="film-reel" width="25" height="25"/>
+        <image name="info" width="25" height="25"/>
+        <image name="search" width="25" height="25"/>
     </resources>
 </document>

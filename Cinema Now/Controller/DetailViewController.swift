@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var moviePosterImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var overviewDetail: UITextView!
     @IBOutlet weak var CircularProgress: CircularProgressView!
     
@@ -41,12 +42,18 @@ class DetailViewController: UIViewController {
         
         titleLabel.text = movie.title
         overviewDetail.text = movie.overview
+        releaseDate.text = ("Release Date: " + (movie.release_date?.convertDateString())!)
         
         // Movie Average
         if let average = movie.vote_average {
             let rating = String(format:"%.1f", average)
             ratingLabel.text = "\(rating)"
         }
+        
+        //Will have to create a taskForGET release date/cast/crew?/trailers
+        
+//        let _ = client.taskForGETMethod(<#T##method: String##String#>, parameters: <#T##[String : AnyObject]#>, completionHandlerForGET: <#T##(Data?, NSError?) -> Void#>)
+        
         // Movie Poster
         if let posterPath = movie.poster_path {
             let _ = client.taskForGETImage(ImageKeys.PosterSizes.DETAIL_POSTER, filePath: posterPath) { (data, error) in
