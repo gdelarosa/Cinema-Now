@@ -17,6 +17,13 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cancelRequest = false
+        
+        if NetworkCheck.isConnectedToNetwork() {
+            print("You have internet connection!")
+        } else {
+            print("No internet connection!")
+            connectionAlert()
+        }
     }
     
     override func viewDidLoad() {
@@ -31,6 +38,12 @@ class HomeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         cancelRequest = true
+    }
+    
+    func connectionAlert() {
+        let alert = UIAlertController(title: "Uh Oh", message: "You have no network connection. Please try connecting again.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

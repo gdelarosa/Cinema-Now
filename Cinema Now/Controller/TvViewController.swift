@@ -13,13 +13,16 @@ class TvViewController: UIViewController {
     var shows: [Movie] = []
     let client = Service()
     var cancelRequest: Bool = false
+    var gradient: CAGradientLayer!
     
-    @IBOutlet weak var popularTvCollectionView: UICollectionView!
+    @IBOutlet weak var onAirCollectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         loadLatestTvData()
+        
+
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
@@ -28,14 +31,14 @@ class TvViewController: UIViewController {
     
     private func loadLatestTvData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
-        let _ = client.taskForGETMethod(Methods.ON_THE_AIR, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in
+        let _ = client.taskForGETMethod(Methods.TRENDING_TV, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
                 
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
                     self.shows += movieResults
                     DispatchQueue.main.async {
-                        self.popularTvCollectionView.reloadData()
+                        self.onAirCollectionView.reloadData()
                     }
                 }
                 if let totalPages = result?.total_pages, totalPages < 10 {
@@ -73,25 +76,33 @@ extension TvViewController: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       
-        let popularTvCell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularTv", for: indexPath) as! PopularTVCell
+        let onAirCell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularTv", for: indexPath) as! OnAirCell
         
         let tv = shows[indexPath.row]
+        
+        onAirCell.nameLabel.text = tv.name
+        onAirCell.firstAirDate.text = ("Original Air Date: " + (tv.first_air_date?.convertDateString())!)
+        
         if let posterPath = tv.poster_path {
-            let _ = client.taskForGETImage(ImageKeys.PosterSizes.DETAIL_POSTER, filePath: posterPath, completionHandlerForImage: { (imageData, error) in
+            let _ = client.taskForGETImage(ImageKeys.PosterSizes.ORIGINAL_POSTER, filePath: posterPath, completionHandlerForImage: { (imageData, error) in
                 if let image = UIImage(data: imageData!) {
                     
                     DispatchQueue.main.async {
-                        popularTvCell.activityIndicator.alpha = 0.0
-                        popularTvCell.activityIndicator.stopAnimating()
-                        popularTvCell.popularTvImage.image = image
+                        onAirCell.activityIndicator.alpha = 0.0
+                        onAirCell.activityIndicator.stopAnimating()
+                        onAirCell.onAirImage.image = image
                     }
                 }
             })
         } else {
-            popularTvCell.activityIndicator.alpha = 0.0
-            popularTvCell.activityIndicator.stopAnimating()
+            onAirCell.activityIndicator.alpha = 0.0
+            onAirCell.activityIndicator.stopAnimating()
         }
-        return popularTvCell
+        return onAirCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
     
     

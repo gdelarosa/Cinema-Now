@@ -19,7 +19,7 @@
 		7726B40821EC3285003F29AA /* TopRatedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B40721EC3285003F29AA /* TopRatedRow.swift */; };
 		7726B40A21EC329A003F29AA /* TopRatedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B40921EC329A003F29AA /* TopRatedCell.swift */; };
 		7759404821F9308A00A6FE0B /* TvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7759404721F9308A00A6FE0B /* TvViewController.swift */; };
-		7759404E21F9315200A6FE0B /* PopularTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7759404D21F9315200A6FE0B /* PopularTVCell.swift */; };
+		7759404E21F9315200A6FE0B /* OnAirCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7759404D21F9315200A6FE0B /* OnAirCell.swift */; };
 		775C42B321ED376400722025 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C42B221ED376400722025 /* Extensions.swift */; };
 		777310DC21E7E98300409884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777310DB21E7E98300409884 /* AppDelegate.swift */; };
 		777310E121E7E98300409884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777310DF21E7E98300409884 /* Main.storyboard */; };
@@ -34,6 +34,7 @@
 		7773111021E810B100409884 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773110F21E810B100409884 /* DetailViewController.swift */; };
 		7773111821E8627F00409884 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773111721E8627F00409884 /* Trailer.swift */; };
 		777972D921F6E40800C16474 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777972D821F6E40800C16474 /* Actor.swift */; };
+		77BBCDE221F96C5E001012B2 /* NetworkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BBCDE121F96C5E001012B2 /* NetworkCheck.swift */; };
 		77BC64E121F7B4F900F97F97 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BC64E021F7B4F900F97F97 /* CircularProgressView.swift */; };
 		77BC64E321F7BC2000F97F97 /* ActorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BC64E221F7BC2000F97F97 /* ActorDetailViewController.swift */; };
 		77BC64EE21F7CA2500F97F97 /* Mosk Bold 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64EC21F7C97B00F97F97 /* Mosk Bold 700.ttf */; };
@@ -71,7 +72,7 @@
 		7726B40721EC3285003F29AA /* TopRatedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedRow.swift; sourceTree = "<group>"; };
 		7726B40921EC329A003F29AA /* TopRatedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCell.swift; sourceTree = "<group>"; };
 		7759404721F9308A00A6FE0B /* TvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvViewController.swift; sourceTree = "<group>"; };
-		7759404D21F9315200A6FE0B /* PopularTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTVCell.swift; sourceTree = "<group>"; };
+		7759404D21F9315200A6FE0B /* OnAirCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirCell.swift; sourceTree = "<group>"; };
 		775C42B221ED376400722025 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		777310D821E7E98300409884 /* Cinema Now.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinema Now.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		777310DB21E7E98300409884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		7773110F21E810B100409884 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7773111721E8627F00409884 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		777972D821F6E40800C16474 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		77BBCDE121F96C5E001012B2 /* NetworkCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCheck.swift; sourceTree = "<group>"; };
 		77BC64E021F7B4F900F97F97 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		77BC64E221F7BC2000F97F97 /* ActorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailViewController.swift; sourceTree = "<group>"; };
 		77BC64E521F7C97B00F97F97 /* Mosk Normal 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Normal 400.ttf"; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 				7726B3F221EBF395003F29AA /* NowPlayingCell.swift */,
 				7726B40321EC2DC9003F29AA /* TrendingCell.swift */,
 				7726B40921EC329A003F29AA /* TopRatedCell.swift */,
-				7759404D21F9315200A6FE0B /* PopularTVCell.swift */,
+				7759404D21F9315200A6FE0B /* OnAirCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -168,6 +170,7 @@
 		777310DA21E7E98300409884 /* Cinema Now */ = {
 			isa = PBXGroup;
 			children = (
+				77BBCDE321F96DA4001012B2 /* Helpers */,
 				77BC64E421F7C96E00F97F97 /* Font */,
 				7773110E21E7ECBF00409884 /* Networking */,
 				7773110B21E7EBDB00409884 /* Extensions */,
@@ -223,7 +226,6 @@
 		7773110A21E7EBC400409884 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				77BC64E021F7B4F900F97F97 /* CircularProgressView.swift */,
 				777310DB21E7E98300409884 /* AppDelegate.swift */,
 				777310E421E7E98600409884 /* LaunchScreen.storyboard */,
 				777310DF21E7E98300409884 /* Main.storyboard */,
@@ -249,6 +251,15 @@
 				777310FD21E7E9D300409884 /* Service.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		77BBCDE321F96DA4001012B2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				77BC64E021F7B4F900F97F97 /* CircularProgressView.swift */,
+				77BBCDE121F96C5E001012B2 /* NetworkCheck.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		77BC64E421F7C96E00F97F97 /* Font */ = {
@@ -381,7 +392,7 @@
 				7726B3F621EBF395003F29AA /* ActorCell.swift in Sources */,
 				7773111821E8627F00409884 /* Trailer.swift in Sources */,
 				7759404821F9308A00A6FE0B /* TvViewController.swift in Sources */,
-				7759404E21F9315200A6FE0B /* PopularTVCell.swift in Sources */,
+				7759404E21F9315200A6FE0B /* OnAirCell.swift in Sources */,
 				7726B40821EC3285003F29AA /* TopRatedRow.swift in Sources */,
 				7773111021E810B100409884 /* DetailViewController.swift in Sources */,
 				7773110421E7EA3400409884 /* MovieResults.swift in Sources */,
@@ -399,6 +410,7 @@
 				7726B3FE21EBF49D003F29AA /* HomeViewController.swift in Sources */,
 				775C42B321ED376400722025 /* Extensions.swift in Sources */,
 				7726B3F421EBF395003F29AA /* UpcomingCell.swift in Sources */,
+				77BBCDE221F96C5E001012B2 /* NetworkCheck.swift in Sources */,
 				7726B40621EC30D6003F29AA /* TrendingRow.swift in Sources */,
 				777310FC21E7E9A600409884 /* Constants.swift in Sources */,
 				777972D921F6E40800C16474 /* Actor.swift in Sources */,

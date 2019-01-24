@@ -21,7 +21,6 @@ class TrendingRow: UITableViewCell {
         loadTrendingData()
     }
     
-    
     private func loadTrendingData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
         let _ = client.taskForGETMethod(Methods.TRENDING_WEEK, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in
@@ -61,7 +60,6 @@ class TrendingRow: UITableViewCell {
 }
 
 extension TrendingRow: UICollectionViewDataSource, UICollectionViewDelegate {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
     }
@@ -93,7 +91,6 @@ extension TrendingRow: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Tapped Cell for Trending")
         if let mainViewController = parentViewController as? HomeViewController {
             guard movies.count > indexPath.row else { return }
             let movie = movies[indexPath.row]
@@ -105,7 +102,6 @@ extension TrendingRow: UICollectionViewDataSource, UICollectionViewDelegate {
 }
 
 extension TrendingRow : UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow:CGFloat = 4
         let hardCodedPadding:CGFloat = 5

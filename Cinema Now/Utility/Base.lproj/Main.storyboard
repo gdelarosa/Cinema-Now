@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Mosk Bold 700.ttf">
+            <string>MoskBold700</string>
+        </array>
         <array key="Mosk Extra-Bold 800.ttf">
             <string>MoskExtra-Bold800</string>
         </array>
@@ -125,7 +128,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularTv" id="O9p-U6-t9m" customClass="PopularTVCell" customModule="Cinema_Now" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularTv" id="O9p-U6-t9m" customClass="OnAirCell" customModule="Cinema_Now" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="375" height="694"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -142,9 +145,16 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TV Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-EG-ZSL">
-                                                    <rect key="frame" x="20" y="613" width="207" height="21"/>
+                                                    <rect key="frame" x="20" y="613" width="335" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="MoskBold700" family="Mosk" pointSize="34"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Air Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehV-R1-jYl">
+                                                    <rect key="frame" x="20" y="666" width="335" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="MoskBold700" family="Mosk" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -152,7 +162,9 @@
                                         </view>
                                         <connections>
                                             <outlet property="activityIndicator" destination="my2-9v-Zmh" id="SC6-OE-YIS"/>
-                                            <outlet property="popularTvImage" destination="buQ-1X-COo" id="BBp-Gf-M3L"/>
+                                            <outlet property="firstAirDate" destination="ehV-R1-jYl" id="NNN-tK-HrX"/>
+                                            <outlet property="nameLabel" destination="6dS-EG-ZSL" id="1Yr-P9-Iui"/>
+                                            <outlet property="onAirImage" destination="buQ-1X-COo" id="BBp-Gf-M3L"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -173,7 +185,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="TV" image="TV" id="HIo-V9-fYT"/>
                     <connections>
-                        <outlet property="popularTvCollectionView" destination="dfG-Fk-Dk3" id="Z0m-t3-DNS"/>
+                        <outlet property="onAirCollectionView" destination="dfG-Fk-Dk3" id="Z0m-t3-DNS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nC-g7-ULV" userLabel="First Responder" sceneMemberID="firstResponder"/>
