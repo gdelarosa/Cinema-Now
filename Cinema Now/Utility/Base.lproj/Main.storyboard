@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NwV-Ib-XZF">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -29,7 +29,7 @@
             <objects>
                 <viewController storyboardIdentifier="movieDetail" id="1WA-f8-olI" customClass="DetailViewController" customModule="Cinema_Now" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u0h-Dh-CSU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Gj-mD-RXo">
@@ -112,52 +112,44 @@
             <objects>
                 <viewController id="bpO-2g-YZL" customClass="TvViewController" customModule="Cinema_Now" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vDw-9W-bnA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-Fk-Dk3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-Fk-Dk3">
+                                <rect key="frame" x="0.0" y="-41" width="375" height="770"/>
                                 <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bby-mz-ejF">
-                                    <size key="itemSize" width="384" height="702"/>
+                                    <size key="itemSize" width="375" height="694"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularTv" id="O9p-U6-t9m" customClass="PopularTVCell" customModule="Cinema_Now" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-42" width="384" height="702"/>
+                                        <rect key="frame" x="0.0" y="38" width="375" height="694"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="384" height="702"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="694"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buQ-1X-COo">
-                                                    <rect key="frame" x="0.0" y="99" width="373" height="503"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buQ-1X-COo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="602"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="my2-9v-Zmh">
                                                     <rect key="frame" x="168" y="233" width="37" height="37"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-EG-ZSL">
-                                                    <rect key="frame" x="20" y="610" width="207" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="207" id="pZI-ph-nyy"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TV Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-EG-ZSL">
+                                                    <rect key="frame" x="20" y="613" width="207" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="6dS-EG-ZSL" firstAttribute="leading" secondItem="O9p-U6-t9m" secondAttribute="leadingMargin" constant="12" id="FVp-wD-15e"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="6dS-EG-ZSL" secondAttribute="bottom" constant="63" id="kPA-RU-8xe"/>
-                                            <constraint firstItem="6dS-EG-ZSL" firstAttribute="top" secondItem="buQ-1X-COo" secondAttribute="bottom" constant="8" symbolic="YES" id="tmd-cS-NEr"/>
-                                            <constraint firstItem="6dS-EG-ZSL" firstAttribute="top" secondItem="buQ-1X-COo" secondAttribute="bottom" constant="8" id="uDm-ZB-iVt"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="activityIndicator" destination="my2-9v-Zmh" id="SC6-OE-YIS"/>
                                             <outlet property="popularTvImage" destination="buQ-1X-COo" id="BBp-Gf-M3L"/>
@@ -171,6 +163,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="dfG-Fk-Dk3" firstAttribute="leading" secondItem="YBu-In-Pjl" secondAttribute="leading" id="FN5-7t-aTo"/>
+                            <constraint firstItem="dfG-Fk-Dk3" firstAttribute="trailing" secondItem="YBu-In-Pjl" secondAttribute="trailing" id="jN4-Hz-cmj"/>
+                            <constraint firstItem="dfG-Fk-Dk3" firstAttribute="top" secondItem="vDw-9W-bnA" secondAttribute="top" constant="-41" id="kse-sx-tAA"/>
+                            <constraint firstItem="dfG-Fk-Dk3" firstAttribute="bottom" secondItem="YBu-In-Pjl" secondAttribute="bottom" id="lee-Nb-kyN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YBu-In-Pjl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="TV" image="TV" id="HIo-V9-fYT"/>
@@ -180,14 +178,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nC-g7-ULV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-311.19999999999999" y="-448.42578710644682"/>
+            <point key="canvasLocation" x="-311.19999999999999" y="-448.52216748768473"/>
         </scene>
         <!--Search-->
         <scene sceneID="yzg-H0-nOp">
             <objects>
                 <viewController id="5Om-ca-WCr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hao-LX-bxW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search for movies" translatesAutoresizingMaskIntoConstraints="NO" id="qXu-tp-xoJ">
@@ -210,7 +208,7 @@
             <objects>
                 <viewController id="ffJ-0R-iQT" customClass="AboutViewController" customModule="Cinema_Now" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8PQ-cm-Eup">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wb-7i-ucN">
@@ -267,7 +265,7 @@
             <objects>
                 <viewController storyboardIdentifier="actorDetail" id="boF-rc-5ox" customClass="ActorDetailViewController" customModule="Cinema_Now" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lNH-8j-Lp9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zps-TP-qD4">
@@ -303,11 +301,11 @@
                         <viewControllerLayoutGuide type="bottom" id="jV8-b2-bLI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rwe-vj-Jo2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="145" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XH5-Va-9tJ">
-                                <rect key="frame" x="0.0" y="-74" width="375" height="692"/>
+                                <rect key="frame" x="0.0" y="-74" width="375" height="803"/>
                                 <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="upcomingCell" rowHeight="378" id="VEn-Pm-5jG" customClass="UpcomingRow" customModule="Cinema_Now" customModuleProvider="target">
@@ -328,7 +326,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="upcomingCell" id="zd9-gU-For" customClass="UpcomingCell" customModule="Cinema_Now" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="18.5" width="387" height="425"/>
+                                                            <rect key="frame" x="5" y="18.666666666666668" width="387" height="425"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="387" height="425"/>
@@ -484,14 +482,14 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="e4u-y0-5dE" customClass="NowPlayingCell" customModule="Cinema_Now" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="5.5" width="109" height="134.5"/>
+                                                            <rect key="frame" x="5" y="5.333333333333333" width="109" height="134.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-YR-Yb3">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.66666666666666"/>
                                                                     </imageView>
                                                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="RIv-e8-iIq">
                                                                         <rect key="frame" x="44" y="57" width="20" height="20"/>
@@ -548,14 +546,14 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="trendingCell" id="xox-uB-aTb" customClass="TrendingCell" customModule="Cinema_Now" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="5.5" width="109" height="134.5"/>
+                                                            <rect key="frame" x="5" y="5.333333333333333" width="109" height="134.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0t-X5-zoJ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.66666666666666"/>
                                                                     </imageView>
                                                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="tLJ-NS-NW5">
                                                                         <rect key="frame" x="44" y="57" width="20" height="20"/>
@@ -598,11 +596,11 @@
                                         <rect key="frame" x="0.0" y="780" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZGn-N6-KJz" id="KT7-8a-c3m">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1o-Su-7Z9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.66666666666666"/>
                                                     <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="qXB-UA-sMv">
                                                         <size key="itemSize" width="109" height="134.5"/>
@@ -619,7 +617,7 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YUf-Dc-J4g">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.66666666666666"/>
                                                                     </imageView>
                                                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="cHv-86-myT">
                                                                         <rect key="frame" x="44" y="57" width="20" height="20"/>

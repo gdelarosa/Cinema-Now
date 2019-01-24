@@ -22,6 +22,10 @@ class TvViewController: UIViewController {
         loadLatestTvData()
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     private func loadLatestTvData(onPage page: Int = 1) {
         guard !cancelRequest else { return }
         let _ = client.taskForGETMethod(Methods.ON_THE_AIR, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in

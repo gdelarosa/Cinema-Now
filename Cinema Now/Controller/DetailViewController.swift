@@ -79,6 +79,10 @@ class DetailViewController: UIViewController {
         
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     /// Animation for average score
     @objc func animateProgress() {
         

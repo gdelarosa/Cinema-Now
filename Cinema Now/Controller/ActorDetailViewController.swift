@@ -34,5 +34,9 @@ class ActorDetailViewController: UIViewController {
             }
         }
     }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
 
 }

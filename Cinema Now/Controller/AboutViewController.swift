@@ -12,9 +12,11 @@ import MessageUI
 class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-       
+        super.viewDidLoad()       
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     @IBAction func githubLink(_ sender: Any) {
