@@ -47,6 +47,7 @@
 		77BC64F521F7CA3500F97F97 /* Mosk Thin 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64EA21F7C97B00F97F97 /* Mosk Thin 100.ttf */; };
 		77BC64F621F7CA3700F97F97 /* Mosk Ultra-Bold 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77BC64ED21F7C97B00F97F97 /* Mosk Ultra-Bold 900.ttf */; };
 		77BC64F821F91CB800F97F97 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BC64F721F91CB800F97F97 /* AboutViewController.swift */; };
+		77E665A421FA376B007E9570 /* TvDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E665A321FA376B007E9570 /* TvDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		77BC64EC21F7C97B00F97F97 /* Mosk Bold 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Bold 700.ttf"; sourceTree = "<group>"; };
 		77BC64ED21F7C97B00F97F97 /* Mosk Ultra-Bold 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Ultra-Bold 900.ttf"; sourceTree = "<group>"; };
 		77BC64F721F91CB800F97F97 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		77E665A321FA376B007E9570 /* TvDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,9 +198,8 @@
 			children = (
 				7726B3FD21EBF49D003F29AA /* HomeViewController.swift */,
 				7759404721F9308A00A6FE0B /* TvViewController.swift */,
-				7773110F21E810B100409884 /* DetailViewController.swift */,
-				77BC64E221F7BC2000F97F97 /* ActorDetailViewController.swift */,
 				77BC64F721F91CB800F97F97 /* AboutViewController.swift */,
+				77E665A521FA376F007E9570 /* Detail */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +277,16 @@
 				77BC64ED21F7C97B00F97F97 /* Mosk Ultra-Bold 900.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		77E665A521FA376F007E9570 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7773110F21E810B100409884 /* DetailViewController.swift */,
+				77BC64E221F7BC2000F97F97 /* ActorDetailViewController.swift */,
+				77E665A321FA376B007E9570 /* TvDetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +415,7 @@
 				77BC64E121F7B4F900F97F97 /* CircularProgressView.swift in Sources */,
 				7726B40A21EC329A003F29AA /* TopRatedCell.swift in Sources */,
 				7726B3FA21EBF3A3003F29AA /* NowPlayingRow.swift in Sources */,
+				77E665A421FA376B007E9570 /* TvDetailViewController.swift in Sources */,
 				77BC64E321F7BC2000F97F97 /* ActorDetailViewController.swift in Sources */,
 				777310DC21E7E98300409884 /* AppDelegate.swift in Sources */,
 				7726B3F521EBF395003F29AA /* NowPlayingCell.swift in Sources */,

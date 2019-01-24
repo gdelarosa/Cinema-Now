@@ -20,9 +20,8 @@ class TvViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        onAirCollectionView.reloadData()
         loadLatestTvData()
-        
-
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
@@ -102,8 +101,10 @@ extension TvViewController: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        guard shows.count > indexPath.row else { return }
+        let tv = shows[indexPath.row]
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "tvDetail") as? TvDetailViewController else { return }
+        detailVC.shows = tv
+        self.showDetailViewController(detailVC, sender: self)
     }
-    
-    
 }

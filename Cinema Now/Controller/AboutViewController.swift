@@ -4,7 +4,7 @@
 //
 //  Created by Gina De La Rosa on 1/23/19.
 //  Copyright © 2019 Gina De La Rosa. All rights reserved.
-//
+//  About View Controller
 
 import UIKit
 import MessageUI
@@ -66,8 +66,4 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
         }
         self.dismiss(animated: true, completion: nil)
     }
-    
-
-
-
 }

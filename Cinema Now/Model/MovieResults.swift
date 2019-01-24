@@ -12,6 +12,7 @@ struct MovieResults: Codable {
     
     var region: String?
     var results: [Movie]?
+    var known_for: [Movie]?
     var total_pages: Int?
     var total_results: Int?
     

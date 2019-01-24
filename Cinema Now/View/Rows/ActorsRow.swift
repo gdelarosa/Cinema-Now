@@ -24,6 +24,7 @@ class ActorsRow: UITableViewCell {
         guard !cancelRequest else { return }
         let _ = client.taskForGETMethod(Methods.POPULAR_ACTORS, parameters: [ParameterKeys.TOTAL_RESULTS: page as AnyObject]) { (data, error) in
             if error == nil, let jsonData = data {
+                
                 let result = MovieResults.decode(jsonData: jsonData)
                 if let movieResults = result?.results {
                     self.movies += movieResults
@@ -33,6 +34,7 @@ class ActorsRow: UITableViewCell {
                         self.movieCollectionView.reloadData()
                     }
                 }
+                
                 if let totalPages = result?.total_pages, totalPages < 10 {
                     guard !self.cancelRequest else {
                         print("Total Pages Actors: \(totalPages)")

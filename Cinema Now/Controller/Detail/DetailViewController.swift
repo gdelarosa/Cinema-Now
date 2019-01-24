@@ -7,13 +7,10 @@
 //
 
 import UIKit
-import WebKit
 
 class DetailViewController: UIViewController {
     
     // MARK: - IBOutlets
-    
-    //@IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var moviePosterImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,17 +20,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var CircularProgress: CircularProgressView!
     
     // MARK: - Properties
-    
     var movie: Movie!
     let client = Service()
     
-    let youtubeURL = "https://www.youtube.com/embed/"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-            //let url = URL(string: "https://www.youtube.com/watch?v=kAT9Hb6QMAE&list=UUi8e0iOVk1fEOogdfu4YgfA")
-            //webView.load(URLRequest(url: url!))
         
        self.perform(#selector(animateProgress), with: nil, afterDelay: 0.5)
         
