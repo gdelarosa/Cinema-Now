@@ -48,5 +48,9 @@ struct Movie: Codable {
     let genre_ids: [Int]?
     let popularity: Double?
     var vote_average: Double?
+    
+    //TV
+    let first_air_date: String?
+    let name: String?
 }
 

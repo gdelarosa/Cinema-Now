@@ -110,18 +110,77 @@
         <!--TV-->
         <scene sceneID="Ski-Is-X5C">
             <objects>
-                <viewController id="bpO-2g-YZL" sceneMemberID="viewController">
+                <viewController id="bpO-2g-YZL" customClass="TvViewController" customModule="Cinema_Now" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vDw-9W-bnA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-Fk-Dk3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bby-mz-ejF">
+                                    <size key="itemSize" width="384" height="702"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularTv" id="O9p-U6-t9m" customClass="PopularTVCell" customModule="Cinema_Now" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-42" width="384" height="702"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="702"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buQ-1X-COo">
+                                                    <rect key="frame" x="0.0" y="99" width="373" height="503"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="my2-9v-Zmh">
+                                                    <rect key="frame" x="168" y="233" width="37" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </activityIndicatorView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-EG-ZSL">
+                                                    <rect key="frame" x="20" y="610" width="207" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="207" id="pZI-ph-nyy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="6dS-EG-ZSL" firstAttribute="leading" secondItem="O9p-U6-t9m" secondAttribute="leadingMargin" constant="12" id="FVp-wD-15e"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="6dS-EG-ZSL" secondAttribute="bottom" constant="63" id="kPA-RU-8xe"/>
+                                            <constraint firstItem="6dS-EG-ZSL" firstAttribute="top" secondItem="buQ-1X-COo" secondAttribute="bottom" constant="8" symbolic="YES" id="tmd-cS-NEr"/>
+                                            <constraint firstItem="6dS-EG-ZSL" firstAttribute="top" secondItem="buQ-1X-COo" secondAttribute="bottom" constant="8" id="uDm-ZB-iVt"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="my2-9v-Zmh" id="SC6-OE-YIS"/>
+                                            <outlet property="popularTvImage" destination="buQ-1X-COo" id="BBp-Gf-M3L"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="bpO-2g-YZL" id="kbv-VK-ajf"/>
+                                    <outlet property="delegate" destination="bpO-2g-YZL" id="0HL-8u-0XM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="YBu-In-Pjl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="TV" image="TV" id="HIo-V9-fYT"/>
+                    <connections>
+                        <outlet property="popularTvCollectionView" destination="dfG-Fk-Dk3" id="Z0m-t3-DNS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nC-g7-ULV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-310" y="-448"/>
+            <point key="canvasLocation" x="-311.19999999999999" y="-448.42578710644682"/>
         </scene>
         <!--Search-->
         <scene sceneID="yzg-H0-nOp">
@@ -633,6 +692,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="NwV-Ib-XZF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YaU-UG-Y3a">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
