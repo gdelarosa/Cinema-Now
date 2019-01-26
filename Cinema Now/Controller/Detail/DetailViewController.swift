@@ -26,6 +26,13 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        moviePosterImage.layer.shadowColor = UIColor.white.cgColor
+        moviePosterImage.layer.shadowOpacity = 1
+        moviePosterImage.layer.shadowOffset = CGSize.zero
+        moviePosterImage.layer.shadowRadius = 7
+        moviePosterImage.layer.shadowPath = UIBezierPath(rect: moviePosterImage.bounds).cgPath
+        moviePosterImage.layer.shouldRasterize = false
+        
        self.perform(#selector(animateProgress), with: nil, afterDelay: 0.5)
         
         // MARK: Movie Data
@@ -79,7 +86,7 @@ class DetailViewController: UIViewController {
         
         let cP = self.view.viewWithTag(101) as! CircularProgressView
         cP.setProgressWithAnimation(duration: 0.7, value: 0.2)
-        cP.trackColor = UIColor.black
+        cP.trackColor = UIColor.white
         
         let average = movie.vote_average!
         let one = 1.0...1.9
