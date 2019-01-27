@@ -26,12 +26,14 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        moviePosterImage.layer.shadowColor = UIColor.white.cgColor
-        moviePosterImage.layer.shadowOpacity = 1
-        moviePosterImage.layer.shadowOffset = CGSize.zero
-        moviePosterImage.layer.shadowRadius = 7
-        moviePosterImage.layer.shadowPath = UIBezierPath(rect: moviePosterImage.bounds).cgPath
-        moviePosterImage.layer.shouldRasterize = false
+        backgroundImage.addBlurEffect()
+        
+//        moviePosterImage.layer.shadowColor = UIColor.white.cgColor
+//        moviePosterImage.layer.shadowOpacity = 1
+//        moviePosterImage.layer.shadowOffset = CGSize.zero
+//        moviePosterImage.layer.shadowRadius = 7
+//        moviePosterImage.layer.shadowPath = UIBezierPath(rect: moviePosterImage.bounds).cgPath
+//        moviePosterImage.layer.shouldRasterize = false
         
        self.perform(#selector(animateProgress), with: nil, afterDelay: 0.5)
         
@@ -140,13 +142,6 @@ class DetailViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        moviePosterImage.contentMode = .scaleAspectFit
-        backgroundImage.contentMode = .scaleToFill
-        overviewDetail.scrollRectToVisible(CGRect.zero, animated: true)
     }
 
 }

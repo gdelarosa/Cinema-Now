@@ -9,13 +9,21 @@
 import Foundation
 import UIKit
 
-// Converts UIImage to Rounded Image
 extension UIImageView {
-    
+    // Make image rounded
     func makeRounded() {
         let radius = self.frame.width/2.0
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
+    }
+    // Adds Blur
+    func addBlurEffect()
+    {
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.alpha = 0.7
+        blurEffectView.frame = self.bounds
+        self.addSubview(blurEffectView)
     }
 }
 // Converts String to Date

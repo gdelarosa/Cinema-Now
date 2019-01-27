@@ -39,4 +39,7 @@ class ActorDetailViewController: UIViewController {
         return .lightContent
     }
 
+    @IBAction func dismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
