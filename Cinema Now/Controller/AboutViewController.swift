@@ -16,7 +16,7 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
-        return .lightContent
+        return .default
     }
     
     @IBAction func githubLink(_ sender: Any) {
