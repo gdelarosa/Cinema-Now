@@ -24,6 +24,7 @@ class TvDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.perform(#selector(animateProgress), with: nil, afterDelay: 0.5)
+        backgroundImage.addBlurEffect()
         
         // MARK: Movie Data
         guard shows != nil else { return }

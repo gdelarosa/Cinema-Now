@@ -26,14 +26,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backgroundImage.addBlurEffect()
-        
-//        moviePosterImage.layer.shadowColor = UIColor.white.cgColor
-//        moviePosterImage.layer.shadowOpacity = 1
-//        moviePosterImage.layer.shadowOffset = CGSize.zero
-//        moviePosterImage.layer.shadowRadius = 7
-//        moviePosterImage.layer.shadowPath = UIBezierPath(rect: moviePosterImage.bounds).cgPath
-//        moviePosterImage.layer.shouldRasterize = false
+       backgroundImage.addBlurEffect()
         
        self.perform(#selector(animateProgress), with: nil, afterDelay: 0.5)
         
@@ -137,9 +130,7 @@ class DetailViewController: UIViewController {
             cP.progressColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         }
     }
-    
     // MARK: Actions
-    
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

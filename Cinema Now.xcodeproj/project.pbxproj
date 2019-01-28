@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7721DE4B21FE377A00B05DD7 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721DE4A21FE377A00B05DD7 /* Cast.swift */; };
+		7721DE4F21FE464900B05DD7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721DE4E21FE464900B05DD7 /* SearchViewController.swift */; };
+		7721DE5121FE466700B05DD7 /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721DE5021FE466700B05DD7 /* SearchResultsCell.swift */; };
 		7726B3F421EBF395003F29AA /* UpcomingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B3F121EBF394003F29AA /* UpcomingCell.swift */; };
 		7726B3F521EBF395003F29AA /* NowPlayingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B3F221EBF395003F29AA /* NowPlayingCell.swift */; };
 		7726B3F621EBF395003F29AA /* ActorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726B3F321EBF395003F29AA /* ActorCell.swift */; };
@@ -61,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7721DE4A21FE377A00B05DD7 /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
+		7721DE4E21FE464900B05DD7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7721DE5021FE466700B05DD7 /* SearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCell.swift; sourceTree = "<group>"; };
 		7726B3F121EBF394003F29AA /* UpcomingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingCell.swift; sourceTree = "<group>"; };
 		7726B3F221EBF395003F29AA /* NowPlayingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingCell.swift; sourceTree = "<group>"; };
 		7726B3F321EBF395003F29AA /* ActorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorCell.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				7726B40321EC2DC9003F29AA /* TrendingCell.swift */,
 				7726B40921EC329A003F29AA /* TopRatedCell.swift */,
 				7759404D21F9315200A6FE0B /* OnAirCell.swift */,
+				7721DE5021FE466700B05DD7 /* SearchResultsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 			children = (
 				7726B3FD21EBF49D003F29AA /* HomeViewController.swift */,
 				7759404721F9308A00A6FE0B /* TvViewController.swift */,
+				7721DE4E21FE464900B05DD7 /* SearchViewController.swift */,
 				77BC64F721F91CB800F97F97 /* AboutViewController.swift */,
 				77E665A521FA376F007E9570 /* Detail */,
 			);
@@ -220,6 +228,7 @@
 				7773110321E7EA3400409884 /* MovieResults.swift */,
 				7773111721E8627F00409884 /* Trailer.swift */,
 				777972D821F6E40800C16474 /* Actor.swift */,
+				7721DE4A21FE377A00B05DD7 /* Cast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -406,6 +415,7 @@
 				7759404E21F9315200A6FE0B /* OnAirCell.swift in Sources */,
 				7726B40821EC3285003F29AA /* TopRatedRow.swift in Sources */,
 				7773111021E810B100409884 /* DetailViewController.swift in Sources */,
+				7721DE5121FE466700B05DD7 /* SearchResultsCell.swift in Sources */,
 				7773110421E7EA3400409884 /* MovieResults.swift in Sources */,
 				777310FE21E7E9D300409884 /* Service.swift in Sources */,
 				7726B3FC21EBF3A3003F29AA /* ActorsRow.swift in Sources */,
@@ -416,6 +426,7 @@
 				7726B40A21EC329A003F29AA /* TopRatedCell.swift in Sources */,
 				7726B3FA21EBF3A3003F29AA /* NowPlayingRow.swift in Sources */,
 				77E665A421FA376B007E9570 /* TvDetailViewController.swift in Sources */,
+				7721DE4B21FE377A00B05DD7 /* Cast.swift in Sources */,
 				77BC64E321F7BC2000F97F97 /* ActorDetailViewController.swift in Sources */,
 				777310DC21E7E98300409884 /* AppDelegate.swift in Sources */,
 				7726B3F521EBF395003F29AA /* NowPlayingCell.swift in Sources */,
@@ -427,6 +438,7 @@
 				777310FC21E7E9A600409884 /* Constants.swift in Sources */,
 				777972D921F6E40800C16474 /* Actor.swift in Sources */,
 				77BC64F821F91CB800F97F97 /* AboutViewController.swift in Sources */,
+				7721DE4F21FE464900B05DD7 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

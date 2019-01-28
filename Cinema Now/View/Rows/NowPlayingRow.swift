@@ -8,18 +8,11 @@
 
 import UIKit
 
-//protocol NowPlayingDelegate {
-//    func goToNowPlayingDetail(data: Movie)
-//}
-
 class NowPlayingRow : UITableViewCell {
     
     let client = Service()
     var movies: [Movie] = []
     var cancelRequest: Bool = false
-    
-   // var delegate: NowPlayingDelegate?
-
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -72,8 +65,6 @@ class NowPlayingRow : UITableViewCell {
 extension NowPlayingRow: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        print("Tapped Cell for Now Playing")
         
         if let mainViewController = parentViewController as? HomeViewController {
             guard movies.count > indexPath.row else { return }
