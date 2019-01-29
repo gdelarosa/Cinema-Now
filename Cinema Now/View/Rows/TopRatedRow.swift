@@ -93,7 +93,6 @@ extension TopRatedRow : UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Tapped Cell for Top Rated")
         if let mainViewController = parentViewController as? HomeViewController {
             guard movies.count > indexPath.row else { return }
             let movie = movies[indexPath.row]

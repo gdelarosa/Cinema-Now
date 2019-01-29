@@ -135,4 +135,41 @@ class Service {
         return components.url!
     }
     
+    // MARK: - Search Movies
+    static func fetchMovie(with searchTerm: String, completion: @escaping ([Movie]?) -> Void) {
+        // URL
+        let baseMovieURL = URL(string: "https://api.themoviedb.org/")
+        guard let url = baseMovieURL?.appendingPathComponent("3").appendingPathComponent("search").appendingPathComponent("movie") else { completion(nil); return }
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
+        let apiKeyQueryItem = URLQueryItem(name: "api_key", value: Api.KEY)
+        let searchTermQueryItem = URLQueryItem(name: "query", value: searchTerm)
+        components?.queryItems = [apiKeyQueryItem, searchTermQueryItem]
+        
+        guard let requestURL = components?.url else { completion(nil) ; return }
+        
+        // REQUEST
+        let request = URLRequest(url: requestURL)
+        
+        // DataTask + RESUME
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print("There was an error \(error.localizedDescription)")
+                completion (nil)
+                return
+            }
+            
+            guard let data = data else { completion(nil) ; return }
+            
+            do {
+                let movieResults = try JSONDecoder().decode(MovieResults.self, from: data)
+                let movies = movieResults.results
+                completion(movies)
+            } catch {
+                print("There was an error \(error.localizedDescription)")
+                completion(nil)
+                return
+            }
+            }.resume()
+    }
+    
 }
