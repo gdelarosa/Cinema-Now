@@ -170,6 +170,5 @@ class Service {
                 return
             }
             }.resume()
-    }
-    
+    }    
 }

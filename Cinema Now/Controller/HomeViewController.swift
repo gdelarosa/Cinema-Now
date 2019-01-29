@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     let client = Service()
     var movies: [Movie] = []
+   
     
     var cancelRequest: Bool = false
     

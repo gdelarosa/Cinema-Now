@@ -13,11 +13,12 @@ class UpcomingRow: UITableViewCell {
     let client = Service()
     var movies: [Movie] = []
     var cancelRequest: Bool = false
+    var movie: Movie!
     
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
 
+    
     override func awakeFromNib() {
-        
         loadUpcomingData()
     }
     
@@ -79,12 +80,14 @@ extension UpcomingRow: UICollectionViewDataSource, UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCell", for: indexPath) as! UpcomingCell
         
         let movie = movies[indexPath.row]
+    
         
         cell.releaseDate.text = ("Release Date: " + (movie.release_date?.convertDateString())!)
         cell.movieTitle.text = movie.title!
-        // TO-DO: Convert array of Int to String ID
-        cell.genre.text = "\(String(describing: movie.genre_ids))"
         
+        //MARK: TO DO - Get Genres
+       // cell.genre.text = "\(list)"
+
         // set poster image
         if let posterPath = movie.backdrop_path {
             let _ = client.taskForGETImage(ImageKeys.PosterSizes.BACK_DROP, filePath: posterPath, completionHandlerForImage: { (imageData, error) in

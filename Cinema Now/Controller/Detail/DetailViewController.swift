@@ -43,10 +43,6 @@ class DetailViewController: UIViewController {
             ratingLabel.text = "\(rating)"
         }
         
-        //Will have to create a taskForGET release date/cast/crew?/trailers
-        
-//        let _ = client.taskForGETMethod(<#T##method: String##String#>, parameters: <#T##[String : AnyObject]#>, completionHandlerForGET: <#T##(Data?, NSError?) -> Void#>)
-        
         // Movie Poster
         if let posterPath = movie.poster_path {
             let _ = client.taskForGETImage(ImageKeys.PosterSizes.DETAIL_POSTER, filePath: posterPath) { (data, error) in
