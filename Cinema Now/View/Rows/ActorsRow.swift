@@ -26,6 +26,7 @@ class ActorsRow: UITableViewCell {
             if error == nil, let jsonData = data {
                 
                 let result = MovieResults.decode(jsonData: jsonData)
+                
                 if let movieResults = result?.results {
                     self.movies += movieResults
                     

@@ -9,7 +9,6 @@
 import Foundation
 
 enum Genre: Int {
-    
     case action = 28
     case adventure = 12
     case animation = 16
@@ -79,24 +78,6 @@ struct Movie: Codable {
     //TV
     let first_air_date: String?
     let name: String?
+    var birthday: String?
 }
 
-//Testing
-protocol EnumCollection : Hashable {}
-
-extension Genre {
-    
-    static func cases() -> AnySequence<Genre> {
-        typealias S = Genre
-        return AnySequence { () -> AnyIterator<S> in
-            var raw = 0
-            return AnyIterator {
-                let current : Genre = withUnsafePointer(to: &raw) { $0.withMemoryRebound(to: S.self, capacity: 1) { $0.pointee }
-                }
-                guard current.hashValue == raw else { return nil }
-                raw += 1
-                return current
-            }
-        }
-    }
-}

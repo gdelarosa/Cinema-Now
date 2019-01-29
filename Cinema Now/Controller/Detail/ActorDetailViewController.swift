@@ -15,10 +15,11 @@ class ActorDetailViewController: UIViewController {
     
     var movie: Movie!
     let client = Service()
+    var cancelRequest: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         // MARK: Movie Data
         guard movie != nil else { return }
         
@@ -34,7 +35,7 @@ class ActorDetailViewController: UIViewController {
             }
         }
     }
-    
+
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
@@ -42,4 +43,5 @@ class ActorDetailViewController: UIViewController {
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
 }

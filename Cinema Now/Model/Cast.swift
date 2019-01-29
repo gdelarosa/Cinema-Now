@@ -8,40 +8,28 @@
 
 import Foundation
 
-//struct Cast: Codable {
-//    let cast_id: Int?
-//    let character: String?
-//    let credit_id: String?
-//    let name: String?
-//    let profile_path: String?
-//}
-
-struct Cast: Codable {
-    let castID: Int
-    let character, creditID: String
-    let gender, id: Int
-    let name: String
-    let order: Int
-    let profilePath: String?
+struct Cast:Codable {
+    var cast_id:Int?
+    var character:String?
+    var credit_id:String?
+    var name:String?
+    var profile_path:String?
+    var id:Int?
     
-    enum CodingKeys: String, CodingKey {
-        case castID = "cast_id"
-        case character
-        case creditID = "credit_id"
-        case gender, id, name, order
-        case profilePath = "profile_path"
-    }
+}
+struct Crew:Codable {
+    var credit_id:String?
+    var name:String?
+    var department:String?
+    var job:String?
+    var id:Int?
+    var profile_path:String?
+    
 }
 
-struct Crew: Codable {
-    let creditID, department: String
-    let gender, id: Int
-    let job, name: String
-    let profilePath: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case creditID = "credit_id"
-        case department, gender, id, job, name
-        case profilePath = "profile_path"
-    }
+struct Credits:Codable
+{
+    var id: Int?
+    var cast:[Cast]?
+    var crew:[Crew]?
 }
