@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Person:Codable {
+struct Person: Codable {
     
     var birthday:String?
     var known_for_department:String?

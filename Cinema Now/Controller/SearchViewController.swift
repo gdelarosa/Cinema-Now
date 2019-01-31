@@ -23,7 +23,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchController.delegate = self
         
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     /// Searches movies after selecting Search on bar

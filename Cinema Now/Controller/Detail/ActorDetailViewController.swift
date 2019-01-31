@@ -14,6 +14,7 @@ class ActorDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     var movie: Movie!
+    var person: Person!
     let client = Service()
     var cancelRequest: Bool = false
 
@@ -22,6 +23,8 @@ class ActorDetailViewController: UIViewController {
        
         // MARK: Movie Data
         guard movie != nil else { return }
+        
+        nameLabel.text = movie.name
         
         // Actor's Photo
         if let posterPath = movie.profile_path {
@@ -34,6 +37,7 @@ class ActorDetailViewController: UIViewController {
                 }
             }
         }
+        
     }
 
     override var preferredStatusBarStyle : UIStatusBarStyle {
