@@ -72,7 +72,7 @@ class TvDetailViewController: UIViewController {
         
         let cP = self.view.viewWithTag(101) as! CircularProgressView
         cP.setProgressWithAnimation(duration: 0.7, value: 0.2)
-        cP.trackColor = UIColor.black
+        cP.trackColor = UIColor.white
         
         let average = shows.vote_average!
         let one = 1.0...1.9

@@ -20,6 +20,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.movies.removeAll()
         searchController.delegate = self
         
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -37,6 +38,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             guard let fetchedMovies = movies else { return }
             self.movies = fetchedMovies
             DispatchQueue.main.async {
+                
                 self.searchTableView.reloadData()
                 searchBar.text = nil
             }
@@ -63,6 +65,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
         detailVC.movie = movie
         self.showDetailViewController(detailVC, sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 125
     }
 
 }

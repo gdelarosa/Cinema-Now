@@ -17,10 +17,11 @@ class ActorDetailViewController: UIViewController {
     var person: Person!
     let client = Service()
     var cancelRequest: Bool = false
+    var movies: [Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         // MARK: Movie Data
         guard movie != nil else { return }
         
