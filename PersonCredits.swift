@@ -18,7 +18,7 @@ struct CrewData:Codable {
     var id:Int?
 }
 
-struct PersonCredits:Codable {
+struct PersonCredits: Codable {
     var id: Int?
     var cast:[CastData]?
     var crew:[CrewData]?

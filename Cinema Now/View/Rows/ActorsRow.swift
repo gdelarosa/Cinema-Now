@@ -13,6 +13,7 @@ class ActorsRow: UITableViewCell {
     let client = Service()
     var movies: [Movie] = []
     var cancelRequest: Bool = false
+    var person: [Cast]?
 
     @IBOutlet weak var movieCollectionView: UICollectionView!
     
@@ -29,7 +30,6 @@ class ActorsRow: UITableViewCell {
                 
                 if let movieResults = result?.results {
                     self.movies += movieResults
-                    
                     
                     DispatchQueue.main.async {
                         self.movieCollectionView.reloadData()
@@ -103,12 +103,16 @@ extension ActorsRow: UICollectionViewDataSource, UICollectionViewDataSourcePrefe
     }
     // Need to get data for celebs
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Tapped Cell for Celebrities")
+       
         if let mainViewController = parentViewController as? HomeViewController {
             guard movies.count > indexPath.row else { return }
             let movie = movies[indexPath.row]
+           
+            
             guard let detailVC = mainViewController.storyboard?.instantiateViewController(withIdentifier: "actorDetail") as? ActorDetailViewController else { return }
             detailVC.movie = movie
+            detailVC.personID = movie.id
+            
             mainViewController.show(detailVC, sender: self)
         }
     }

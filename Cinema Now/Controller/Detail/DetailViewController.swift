@@ -16,12 +16,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var runTime: UILabel!
     @IBOutlet weak var overviewDetail: UITextView!
     @IBOutlet weak var CircularProgress: CircularProgressView!
     
     // MARK: - Properties
     var movie: Movie!
     let client = Service()
+    var movieID: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,10 @@ class DetailViewController: UIViewController {
         titleLabel.text = movie.title
         overviewDetail.text = movie.overview
         releaseDate.text = ("Release Date: " + (movie.release_date?.convertDateString())!)
+        
+        if let runtime = movie.runtime{
+            self.runTime.text = "\(runtime) min"
+        }
         
         // Movie Average
         if let average = movie.vote_average {
@@ -71,6 +77,20 @@ class DetailViewController: UIViewController {
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
+    
+//    func displayTrailers() {
+//        client.movieVideos(movieID: (movieID)!) { (videos: VideoInfo) in
+//            if let allVideos = videos.results{
+//                self.videoList = allVideos
+//                DispatchQueue.main.async {
+//                    if self.videoList?.count == 0 {
+//                        self.videoViewHeight.constant = 0.0
+//                    }
+//                    self.videoCollection.reloadData()
+//                }
+//            }
+//        }
+//    }
     
     /// Animation for average score
     @objc func animateProgress() {

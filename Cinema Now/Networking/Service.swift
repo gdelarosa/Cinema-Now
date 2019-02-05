@@ -13,6 +13,26 @@ class Service {
     // Shared session
     var session = URLSession.shared
     
+    // MARK: - Private Helper Functions
+    
+    // Create URL from parameters
+    private func tmdbURLFromParameters(_ parameters: [String:AnyObject], withPathExtension: String? = nil) -> URL {
+        
+        var components = URLComponents()
+        components.scheme = Api.SCHEME
+        components.host = Api.HOST
+        components.path = Api.PATH + (withPathExtension ?? "")
+        components.queryItems = [URLQueryItem]()
+        
+        for (key, value) in parameters {
+            let queryItem = URLQueryItem(name: key, value: "\(value)")
+            components.queryItems!.append(queryItem)
+        }
+        
+        return components.url!
+    }
+    
+    
     // MARK: - Handle Get Requests
     
     func taskForGETMethod(_ method: String, parameters: [String:AnyObject], completionHandlerForGET: @escaping (_ result: Data?, _ error: NSError?) -> Void) -> URLSessionDataTask {
@@ -116,25 +136,7 @@ class Service {
         return task
     }
     
-    // MARK: - Private Helper Functions
-    
-    // Create URL from parameters
-    private func tmdbURLFromParameters(_ parameters: [String:AnyObject], withPathExtension: String? = nil) -> URL {
-        
-        var components = URLComponents()
-        components.scheme = Api.SCHEME
-        components.host = Api.HOST
-        components.path = Api.PATH + (withPathExtension ?? "")
-        components.queryItems = [URLQueryItem]()
-        
-        for (key, value) in parameters {
-            let queryItem = URLQueryItem(name: key, value: "\(value)")
-            components.queryItems!.append(queryItem)
-        }
-        
-        return components.url!
-    }
-    
+   
     // MARK: - Search Movies
     static func fetchMovie(with searchTerm: String, completion: @escaping ([Movie]?) -> Void) {
         // URL
@@ -170,6 +172,113 @@ class Service {
                 return
             }
             }.resume()
+    }
+    
+    
+    // MARK: Simplistic version of requesting data
+    func getDataRequest(url:String, onCompletion:@escaping (Any)->()){
+        let path = "\(Api.BASE_URL)\(url)"
+        if let url = URL(string: path) {
+            print(url)
+            URLSession.shared.dataTask(with: url) {
+                (data, response,error) in
+                
+                guard let data = data, error == nil, response != nil else{
+                    print("Something is wrong: \(String(describing: error?.localizedDescription))")
+                    return
+                }
+                onCompletion(data)
+                }.resume()
+        }
+        else {
+            print("Unable to create URL")
+        }
+    }
+    
+    func movieDetail(movieID:Int, completion: @escaping (Movie)->()) {
+        
+        let getURL = "/movie/\(movieID)?api_key=\(Api.KEY)&language=en-US"
+        getDataRequest(url: getURL) { jsonData in
+            do
+            {
+                let results = try JSONDecoder().decode(Movie.self, from: jsonData as! Data)
+                completion(results)
+            }
+            catch
+            {
+                print("JSON Downloading Error!")
+            }
+        }
+    }
+    
+    func movieVideos(movieID:Int, completion: @escaping (VideoInfo)->()) {
+        
+        let getURL = "/movie/\(movieID)/videos?api_key=\(Api.KEY)&language=en-US"
+        getDataRequest(url: getURL) { jsonData in
+            do
+            {
+                let results = try JSONDecoder().decode(VideoInfo.self, from: jsonData as! Data)
+                completion(results)
+            }
+            catch
+            {
+                print("JSON Downloading Error!")
+            }
+        }
+    }
+    
+    
+    
+    func movieCredits(movieID:Int, completion: @escaping (Credits)->()) {
+        
+        let getURL = "/movie/\(movieID)/credits?api_key=\(Api.KEY)"
+        getDataRequest(url: getURL) { jsonData in
+            do
+            {
+                let results = try JSONDecoder().decode(Credits.self, from: jsonData as! Data)
+                completion(results)
+            }
+            catch
+            {
+                print("JSON Downloading Error!")
+            }
+        }
+    }
+    
+    
+    func personDetails(person_id:Int, completion: @escaping (Person)->()) {
+        
+        let getURL = "/person/\(person_id)?api_key=\(Api.KEY)&language=en-US"
+        getDataRequest(url: getURL) { jsonData in
+            do
+            {
+                
+                let results = try JSONDecoder().decode(Person.self, from: jsonData as! Data)
+                completion(results)
+            }
+            catch
+            {
+                print("JSON Downloading Error!")
+            }
+        }
+    }
+    
+    
+    func personMovieCredits(personID:Int, completion: @escaping (PersonCredits)->()) {
+        
+        let getURL = "/person/\(personID)/movie_credits?api_key=\(Api.KEY)&language=en-US"
+        getDataRequest(url: getURL) { jsonData in
+            do
+            {
+                
+                let results = try JSONDecoder().decode(PersonCredits.self, from: jsonData as! Data)
+                completion(results)
+            }
+            catch
+            {
+                print("JSON Downloading Error!")
+            }
+        }
     }
     
 }
