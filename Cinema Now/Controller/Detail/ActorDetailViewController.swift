@@ -14,7 +14,8 @@ class ActorDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bio: UITextView!
     @IBOutlet weak var actorCredits: UICollectionView!
-   
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    
     
     var movie: Movie!
     var person: Person!
@@ -28,7 +29,7 @@ class ActorDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loading.startAnimating()
         // MARK: Movie Data
         guard movie != nil else { return }
         guard personID != nil else { return }
@@ -59,17 +60,16 @@ class ActorDetailViewController: UIViewController {
         }
         
         //Credits
-        client.personMovieCredits(personID: self.personID!) { (personCredit:PersonCredits) in
+        client.personMovieCredits(personID: self.personID!) { (personCredit:PeopleCredits) in
             if let cast = personCredit.cast{
                 self.cast = cast
             }
-           
             DispatchQueue.main.async {
-               
                 if self.cast.count == 0 {
                     print("There are no items for cast")
-                   // self.castCollectionHeight.constant = 0.0
                 }
+                self.loading.alpha = 0.0
+                self.loading.stopAnimating()
                 self.actorCredits.reloadData()
             }
         }

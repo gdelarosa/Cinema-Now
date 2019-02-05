@@ -264,14 +264,14 @@ class Service {
     }
     
     
-    func personMovieCredits(personID:Int, completion: @escaping (PersonCredits)->()) {
+    func personMovieCredits(personID:Int, completion: @escaping (PeopleCredits)->()) {
         
         let getURL = "/person/\(personID)/movie_credits?api_key=\(Api.KEY)&language=en-US"
         getDataRequest(url: getURL) { jsonData in
             do
             {
                 
-                let results = try JSONDecoder().decode(PersonCredits.self, from: jsonData as! Data)
+                let results = try JSONDecoder().decode(PeopleCredits.self, from: jsonData as! Data)
                 completion(results)
             }
             catch

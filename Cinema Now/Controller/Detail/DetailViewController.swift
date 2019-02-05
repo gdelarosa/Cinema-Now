@@ -39,8 +39,19 @@ class DetailViewController: UIViewController {
         overviewDetail.text = movie.overview
         releaseDate.text = ("Release Date: " + (movie.release_date?.convertDateString())!)
         
-        if let runtime = movie.runtime{
-            self.runTime.text = "\(runtime) min"
+//        if let runtime = movie.runtime{
+//            self.runTime.text = "\(runtime) min"
+//        }
+        
+        //Runtime
+        client.movieDetail(movieID: (movieID)!) { (movieRes:Movie) in
+            self.movie = movieRes
+            DispatchQueue.main.async {
+                if let runtime = self.movie.runtime{
+                    self.runTime.text = "Runtime: \(runtime) min"
+                }
+                
+            }
         }
         
         // Movie Average

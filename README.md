@@ -19,11 +19,8 @@ You can install and run the app using Xcode 10+ and Swift 4. You must also obtai
 * MVC archticture 
 * URLSession
 
-### Credits
-This app is being built and designed by Gina De La Rosa. Changes may occur at anytime and the use of third-party frameworks will be noted here. If time permits and I complete everything that I want to get done, I will publish to the app store but for now this will be an ongoing project. 
-
 ### Contributing
-If you would like to contribute to this app feel free to create a pull request and take a look at the what needs to get done. If you are not familiar with TMDB API check it out here: https://developers.themoviedb.org/3/getting-started/introduction.  
+If you would like to contribute to this app feel free to create fork this project and take a look at the what needs to get done. If you are not familiar with TMDB API check it out here: https://developers.themoviedb.org/3/getting-started/introduction.  
 
 
 ### License

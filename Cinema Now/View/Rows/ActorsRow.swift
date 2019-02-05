@@ -101,7 +101,7 @@ extension ActorsRow: UICollectionViewDataSource, UICollectionViewDataSourcePrefe
             print ( "Prefetching Rows: \( item.row)" )
         }
     }
-    // Need to get data for celebs
+   
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         if let mainViewController = parentViewController as? HomeViewController {

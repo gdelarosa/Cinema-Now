@@ -68,6 +68,7 @@ extension UpcomingRow: UICollectionViewDataSource, UICollectionViewDelegate {
             let movie = movies[indexPath.row]
             guard let detailVC = mainViewController.storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
             detailVC.movie = movie
+            detailVC.movieID = movie.id
             mainViewController.show(detailVC, sender: self)
         }
     }
