@@ -281,4 +281,34 @@ class Service {
         }
     }
     
+     func smallImageURL(path:String)->URL?{
+        if let url = URL(string: Api.smallImagePath+path){
+            return url
+        }
+        return nil
+    }
+    
+     func bigImageURL(path:String)->URL?{
+        if let url = URL(string: Api.bigImagePath+path){
+            return url
+        }
+        return nil
+    }
+    
+    
+     func youtubeThumb(path:String)->URL?{
+        if let url = URL(string: Api.youtubeThumb+path+"/0.jpg"){
+            return url
+        }
+        return nil
+    }
+    
+    
+     func youtubeURL(path:String)->URL?{
+        if let url = URL(string: Api.youtubeLink+path){
+            return url
+        }
+        return nil
+    }
+    
 }

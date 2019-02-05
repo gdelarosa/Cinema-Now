@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class DetailViewController: UIViewController {
     
@@ -19,11 +20,17 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var runTime: UILabel!
     @IBOutlet weak var overviewDetail: UITextView!
     @IBOutlet weak var CircularProgress: CircularProgressView!
+    @IBOutlet weak var actorsCollection: UICollectionView!
+    @IBOutlet weak var trailersCollection: UICollectionView!
+    @IBOutlet weak var videoViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var castViewHeight: NSLayoutConstraint!
     
     // MARK: - Properties
     var movie: Movie!
     let client = Service()
     var movieID: Int?
+    var cast:[Cast]?
+    var videoList:[Videos]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +45,6 @@ class DetailViewController: UIViewController {
         titleLabel.text = movie.title
         overviewDetail.text = movie.overview
         releaseDate.text = ("Release Date: " + (movie.release_date?.convertDateString())!)
-        
-//        if let runtime = movie.runtime{
-//            self.runTime.text = "\(runtime) min"
-//        }
         
         //Runtime
         client.movieDetail(movieID: (movieID)!) { (movieRes:Movie) in
@@ -83,26 +86,42 @@ class DetailViewController: UIViewController {
             }
         }
         
+        // Display cast
+        client.movieCredits(movieID: (movieID)!) { (credits: Credits) in
+            
+            if let cast = credits.cast{
+                self.cast = cast
+            }
+            
+            DispatchQueue.main.async {
+                if self.cast?.count == 0{
+                   // self.castViewHeight.constant = 0.0
+                }
+                self.actorsCollection.reloadData()
+            
+            }
+        }
+        
+        // Display Trailers
+        client.movieVideos(movieID: (movieID)!) { (videos: VideoInfo) in
+            if let allVideos = videos.results{
+                self.videoList = allVideos
+                DispatchQueue.main.async {
+                    if self.videoList?.count == 0 {
+                        //self.videoViewHeight.constant = 0.0
+                    }
+                    self.trailersCollection.reloadData()
+                }
+            }
+        }
+        
     }
     
+    // Status bar will be white
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
-    
-//    func displayTrailers() {
-//        client.movieVideos(movieID: (movieID)!) { (videos: VideoInfo) in
-//            if let allVideos = videos.results{
-//                self.videoList = allVideos
-//                DispatchQueue.main.async {
-//                    if self.videoList?.count == 0 {
-//                        self.videoViewHeight.constant = 0.0
-//                    }
-//                    self.videoCollection.reloadData()
-//                }
-//            }
-//        }
-//    }
-    
+
     /// Animation for average score
     @objc func animateProgress() {
         
@@ -161,5 +180,94 @@ class DetailViewController: UIViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    // Opens trailer in Youtube when tapped
+    @objc func tapVideo(_ sender: UITapGestureRecognizer){
+        let location = sender.location(in: self.trailersCollection)
+        let indexPath = self.trailersCollection.indexPathForItem(at: location)
+        
+        if let index = indexPath {
+            let video_one = self.videoList![index[1]]
+            if let video_key = video_one.key{
+                let videoURL = client.youtubeURL(path: video_key)
+                if let videourl = videoURL{
+                    print(videourl)
+                    
+                    let safariVC = SFSafariViewController(url: videourl)
+                    present(safariVC, animated: true, completion: nil)
+                }
+            }
+        }
+    }
 
+}
+
+extension DetailViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+//        if collectionView == self.actorsCollection{
+//            if let number = self.cast?.count{
+//                return number
+//            }
+//            else{
+//                return 0
+//            }
+//        }
+        if collectionView == self.trailersCollection{
+            if let number = self.videoList?.count {
+                return number
+            }
+            else{
+                return 0
+            }
+        }
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let trailerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "trailerCell", for: indexPath) as! TrailersCell
+//
+//        if collectionView == self.castCollection{
+//            let cast_one = self.cast?[indexPath.row]
+//            if let cast = cast_one{
+//                if let path = cast.profile_path{
+//                    let castImageURL = APIService.smallImageURL(path: path)
+//                    castCell.setData(imageURL: castImageURL!)
+//                }
+//                else{
+//                    castCell.setDefault()
+//                }
+//                castCell.setNames(castName: cast.character!, realName: cast.name!)
+//            }
+//            castCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapCast(_:))))
+//        }
+        
+        if collectionView == self.trailersCollection {
+            let video_one = self.videoList![indexPath.row]
+            if let video_key = video_one.key {
+                let videoThumbURL = client.youtubeThumb(path: video_key)
+                
+//                if let videoImg = videoThumbURL{
+//                    trailerCell.imageView = videoImg
+//                    //trailerCell.setVideoImage(imageURL: videoImg)
+//                }
+                
+                let url = videoThumbURL
+                let data = try? Data(contentsOf: url!)
+                trailerCell.imageView.image = UIImage(data: data!)
+                print("Image URL: \(String(describing: data)) and \(String(describing: videoThumbURL))")
+                
+                
+            } else {
+                print("Unable to get youtube video")
+            }
+            
+            trailerCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapVideo(_:))))
+        }
+        
+        return trailerCell
+        
+   }
 }
