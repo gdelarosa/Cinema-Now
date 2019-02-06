@@ -282,14 +282,14 @@ class Service {
     }
     
      func smallImageURL(path:String)->URL?{
-        if let url = URL(string: Api.smallImagePath+path){
+        if let url = URL(string: ImageKeys.PosterSizes.DETAIL_POSTER+path){
             return url
         }
         return nil
     }
     
      func bigImageURL(path:String)->URL?{
-        if let url = URL(string: Api.bigImagePath+path){
+        if let url = URL(string: ImageKeys.PosterSizes.DETAIL_POSTER+path){
             return url
         }
         return nil

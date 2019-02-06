@@ -2,22 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Mosk Bold 700.ttf</string>
-		<string>Mosk Extra-Light 200.ttf</string>
-		<string>Mosk Light 300.ttf</string>
-		<string>Mosk Medium 500.ttf</string>
-		<string>Mosk Normal 400.ttf</string>
-		<string>Mosk Semi-Bold 600.ttf</string>
-		<string>Mosk Thin 100.ttf</string>
-		<string>Mosk Ultra-Bold 900.ttf</string>
-		<string>Mosk Extra-Bold 800.ttf</string>
-	</array>
-	<key>CFBundleDisplayName</key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -34,6 +22,18 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mosk Bold 700.ttf</string>
+		<string>Mosk Extra-Light 200.ttf</string>
+		<string>Mosk Light 300.ttf</string>
+		<string>Mosk Medium 500.ttf</string>
+		<string>Mosk Normal 400.ttf</string>
+		<string>Mosk Semi-Bold 600.ttf</string>
+		<string>Mosk Thin 100.ttf</string>
+		<string>Mosk Ultra-Bold 900.ttf</string>
+		<string>Mosk Extra-Bold 800.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -52,8 +52,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>
