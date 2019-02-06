@@ -105,6 +105,8 @@ extension TvViewController: UICollectionViewDelegate, UICollectionViewDataSource
         let tv = shows[indexPath.row]
         guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "tvDetail") as? TvDetailViewController else { return }
         detailVC.shows = tv
+        detailVC.tvID = tv.id
+        
         self.showDetailViewController(detailVC, sender: self)
     }
 }

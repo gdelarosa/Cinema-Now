@@ -7,17 +7,21 @@
 //  Detail information about TV Shows
 
 import UIKit
+import SafariServices
 
 class TvDetailViewController: UIViewController {
     
     var shows: Movie!
     let client = Service()
+    var tvID: Int?
+    var videoList:[Videos]?
     
     @IBOutlet weak var tvPosterImage: UIImageView!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var tvName: UILabel!
     @IBOutlet weak var tvOverview: UITextView!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var trailersCollection: UICollectionView! 
     @IBOutlet weak var circularProgrss: CircularProgressView!
     
     
@@ -58,6 +62,19 @@ class TvDetailViewController: UIViewController {
                         let image = UIImage(data: data)
                         self.backgroundImage.image = image
                     }
+                }
+            }
+        }
+        
+        // Display Trailers
+        client.tvVideos(tvID: (tvID)!) { (videos: VideoInfo) in
+            if let allVideos = videos.results{
+                self.videoList = allVideos
+                DispatchQueue.main.async {
+                    if self.videoList?.count == 0 {
+                        //self.videoViewHeight.constant = 0.0
+                    }
+                    self.trailersCollection.reloadData()
                 }
             }
         }
@@ -127,5 +144,66 @@ class TvDetailViewController: UIViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    // Opens trailer in Youtube when tapped
+    @objc func tapVideo(_ sender: UITapGestureRecognizer){
+        let location = sender.location(in: self.trailersCollection)
+        let indexPath = self.trailersCollection.indexPathForItem(at: location)
+        
+        if let index = indexPath {
+            let video_one = self.videoList![index[1]]
+            if let video_key = video_one.key{
+                let videoURL = client.youtubeURL(path: video_key)
+                if let videourl = videoURL{
+                    print(videourl)
+                    
+                    let safariVC = SFSafariViewController(url: videourl)
+                    present(safariVC, animated: true, completion: nil)
+                }
+            }
+        }
+    }
 
 }
+
+extension TvDetailViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+      
+        if collectionView == self.trailersCollection{
+            if let number = self.videoList?.count {
+                return number
+            }
+            else{
+                return 0
+            }
+        }
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let trailerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "trailerCell", for: indexPath) as! TrailersCell
+        
+        if collectionView == self.trailersCollection {
+            let video_one = self.videoList![indexPath.row]
+            if let video_key = video_one.key {
+                let videoThumbURL = client.youtubeThumb(path: video_key)
+                
+                let url = videoThumbURL
+                
+                if let data = try? Data(contentsOf: url!)  {
+                    trailerCell.imageView.image = UIImage(data: data)
+                }  else {
+                    print("There is no video data available")
+                }
+            } else {
+                print("Unable to get youtube video")
+            }
+            trailerCell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapVideo(_:))))
+        }
+        
+        return trailerCell
+    }
+}
+

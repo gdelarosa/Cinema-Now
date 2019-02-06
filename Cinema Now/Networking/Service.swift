@@ -173,7 +173,8 @@ class Service {
             }
             }.resume()
     }
-    
+////////////////////////////////////////////////////////////////////////////////////////////////
+    // MARK: Notes - May want to refactor this later into the same style above.
     
     // MARK: Simplistic version of requesting data
     func getDataRequest(url:String, onCompletion:@escaping (Any)->()){
@@ -195,6 +196,7 @@ class Service {
         }
     }
     
+    // Movie Details
     func movieDetail(movieID:Int, completion: @escaping (Movie)->()) {
         
         let getURL = "/movie/\(movieID)?api_key=\(Api.KEY)&language=en-US"
@@ -211,6 +213,7 @@ class Service {
         }
     }
     
+    // Movie Videos
     func movieVideos(movieID:Int, completion: @escaping (VideoInfo)->()) {
         
         let getURL = "/movie/\(movieID)/videos?api_key=\(Api.KEY)&language=en-US"
@@ -227,8 +230,25 @@ class Service {
         }
     }
     
+    // TV Videos
+    func tvVideos(tvID:Int, completion: @escaping (VideoInfo)->()) {
+        
+        let getURL = "/tv/\(tvID)/videos?api_key=\(Api.KEY)&language=en-US"
+        getDataRequest(url: getURL) { jsonData in
+            do
+            {
+                let results = try JSONDecoder().decode(VideoInfo.self, from: jsonData as! Data)
+                completion(results)
+            }
+            catch
+            {
+                print("JSON Downloading Error!")
+            }
+        }
+    }
     
     
+    // Movie Credits
     func movieCredits(movieID:Int, completion: @escaping (Credits)->()) {
         
         let getURL = "/movie/\(movieID)/credits?api_key=\(Api.KEY)"
