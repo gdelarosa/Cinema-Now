@@ -167,7 +167,8 @@ class Service {
                 let movies = movieResults.results
                 completion(movies)
             } catch {
-                print("There was an error \(error.localizedDescription)")
+                print("There was an error with searching: \(error.localizedDescription)")
+                
                 completion(nil)
                 return
             }

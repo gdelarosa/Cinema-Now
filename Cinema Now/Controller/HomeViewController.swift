@@ -41,12 +41,6 @@ class HomeViewController: UIViewController {
         cancelRequest = true
     }
     
-    func connectionAlert() {
-        let alert = UIAlertController(title: "Uh Oh", message: "You have no network connection. Please try connecting again.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
 }
 
 extension HomeViewController : UITableViewDataSource, UITableViewDelegate {

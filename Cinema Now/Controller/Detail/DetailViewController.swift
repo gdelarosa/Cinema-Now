@@ -22,8 +22,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var CircularProgress: CircularProgressView!
     @IBOutlet weak var actorsCollection: UICollectionView!
     @IBOutlet weak var trailersCollection: UICollectionView!
-    @IBOutlet weak var videoViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var castViewHeight: NSLayoutConstraint!
+    //@IBOutlet weak var videoViewHeight: NSLayoutConstraint!
+    //@IBOutlet weak var castViewHeight: NSLayoutConstraint!
     
     // MARK: - Properties
     var movie: Movie!

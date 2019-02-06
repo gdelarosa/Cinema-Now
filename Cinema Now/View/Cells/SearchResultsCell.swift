@@ -45,7 +45,7 @@ class SearchResultsCell: UITableViewCell {
                 }
             })
         } else {
-            print("Unable to load")
+            print("Unable to load search results.")
         }
     }
 }

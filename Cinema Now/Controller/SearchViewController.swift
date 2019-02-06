@@ -64,6 +64,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let movie = movies[indexPath.row]
         guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "movieDetail") as? DetailViewController else { return }
         detailVC.movie = movie
+        detailVC.movieID = movie.id
         self.showDetailViewController(detailVC, sender: self)
     }
     
