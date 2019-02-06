@@ -88,13 +88,13 @@
 		7759404721F9308A00A6FE0B /* TvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvViewController.swift; sourceTree = "<group>"; };
 		7759404D21F9315200A6FE0B /* OnAirCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirCell.swift; sourceTree = "<group>"; };
 		775C42B221ED376400722025 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		777310D821E7E98300409884 /* Cinema Now.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinema Now.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		777310D821E7E98300409884 /* Cinema Roll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinema Roll.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		777310DB21E7E98300409884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		777310E021E7E98300409884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		777310E221E7E98600409884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		777310E521E7E98600409884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		777310E721E7E98600409884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		777310EC21E7E98600409884 /* Cinema NowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cinema NowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		777310EC21E7E98600409884 /* Cinema RollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cinema RollTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		777310F021E7E98600409884 /* Cinema_NowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema_NowTests.swift; sourceTree = "<group>"; };
 		777310F221E7E98600409884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		777310FB21E7E9A600409884 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 		777310D921E7E98300409884 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				777310D821E7E98300409884 /* Cinema Now.app */,
-				777310EC21E7E98600409884 /* Cinema NowTests.xctest */,
+				777310D821E7E98300409884 /* Cinema Roll.app */,
+				777310EC21E7E98600409884 /* Cinema RollTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -313,9 +313,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		777310D721E7E98300409884 /* Cinema Now */ = {
+		777310D721E7E98300409884 /* Cinema Roll */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 777310F521E7E98600409884 /* Build configuration list for PBXNativeTarget "Cinema Now" */;
+			buildConfigurationList = 777310F521E7E98600409884 /* Build configuration list for PBXNativeTarget "Cinema Roll" */;
 			buildPhases = (
 				777310D421E7E98300409884 /* Sources */,
 				777310D521E7E98300409884 /* Frameworks */,
@@ -325,14 +325,14 @@
 			);
 			dependencies = (
 			);
-			name = "Cinema Now";
+			name = "Cinema Roll";
 			productName = "Cinema Now";
-			productReference = 777310D821E7E98300409884 /* Cinema Now.app */;
+			productReference = 777310D821E7E98300409884 /* Cinema Roll.app */;
 			productType = "com.apple.product-type.application";
 		};
-		777310EB21E7E98600409884 /* Cinema NowTests */ = {
+		777310EB21E7E98600409884 /* Cinema RollTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 777310F821E7E98600409884 /* Build configuration list for PBXNativeTarget "Cinema NowTests" */;
+			buildConfigurationList = 777310F821E7E98600409884 /* Build configuration list for PBXNativeTarget "Cinema RollTests" */;
 			buildPhases = (
 				777310E821E7E98600409884 /* Sources */,
 				777310E921E7E98600409884 /* Frameworks */,
@@ -343,9 +343,9 @@
 			dependencies = (
 				777310EE21E7E98600409884 /* PBXTargetDependency */,
 			);
-			name = "Cinema NowTests";
+			name = "Cinema RollTests";
 			productName = "Cinema NowTests";
-			productReference = 777310EC21E7E98600409884 /* Cinema NowTests.xctest */;
+			productReference = 777310EC21E7E98600409884 /* Cinema RollTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -367,7 +367,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 777310D321E7E98300409884 /* Build configuration list for PBXProject "Cinema Now" */;
+			buildConfigurationList = 777310D321E7E98300409884 /* Build configuration list for PBXProject "Cinema Roll" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -380,8 +380,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				777310D721E7E98300409884 /* Cinema Now */,
-				777310EB21E7E98600409884 /* Cinema NowTests */,
+				777310D721E7E98300409884 /* Cinema Roll */,
+				777310EB21E7E98600409884 /* Cinema RollTests */,
 			);
 		};
 /* End PBXProject section */
@@ -471,7 +471,7 @@
 /* Begin PBXTargetDependency section */
 		777310EE21E7E98600409884 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 777310D721E7E98300409884 /* Cinema Now */;
+			target = 777310D721E7E98300409884 /* Cinema Roll */;
 			targetProxy = 777310ED21E7E98600409884 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -665,7 +665,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cinema Now.app/Cinema Now";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cinema Roll.app/Cinema Roll";
 			};
 			name = Debug;
 		};
@@ -686,14 +686,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cinema Now.app/Cinema Now";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cinema Roll.app/Cinema Roll";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		777310D321E7E98300409884 /* Build configuration list for PBXProject "Cinema Now" */ = {
+		777310D321E7E98300409884 /* Build configuration list for PBXProject "Cinema Roll" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				777310F321E7E98600409884 /* Debug */,
@@ -702,7 +702,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		777310F521E7E98600409884 /* Build configuration list for PBXNativeTarget "Cinema Now" */ = {
+		777310F521E7E98600409884 /* Build configuration list for PBXNativeTarget "Cinema Roll" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				777310F621E7E98600409884 /* Debug */,
@@ -711,7 +711,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		777310F821E7E98600409884 /* Build configuration list for PBXNativeTarget "Cinema NowTests" */ = {
+		777310F821E7E98600409884 /* Build configuration list for PBXNativeTarget "Cinema RollTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				777310F921E7E98600409884 /* Debug */,
