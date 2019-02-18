@@ -205,7 +205,8 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+
+// MARK: NOTE - May add cast later.
 //        if collectionView == self.actorsCollection{
 //            if let number = self.cast?.count{
 //                return number
