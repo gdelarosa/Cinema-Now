@@ -35,7 +35,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       backgroundImage.addBlurEffect()
+       //backgroundImage.addBlurEffect()
+        imageGradient()
         
        self.perform(#selector(animateProgress), with: nil, afterDelay: 0.5)
         
@@ -120,6 +121,16 @@ class DetailViewController: UIViewController {
     // Status bar will be white
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
+    }
+    
+    var gradient: CAGradientLayer!
+    
+    func imageGradient() {
+        gradient = CAGradientLayer()
+        gradient.frame = backgroundImage.bounds
+        gradient.colors = [UIColor.white.cgColor, UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
+        gradient.locations = [0, 0.6, 0.8, 1]
+        backgroundImage.layer.mask = gradient
     }
 
     /// Animation for average score
