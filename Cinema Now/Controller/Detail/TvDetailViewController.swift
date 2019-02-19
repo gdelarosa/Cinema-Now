@@ -28,7 +28,8 @@ class TvDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.perform(#selector(animateProgress), with: nil, afterDelay: 0.5)
-        backgroundImage.addBlurEffect()
+        //backgroundImage.addBlurEffect()
+        imageGradient()
         
         // MARK: Movie Data
         guard shows != nil else { return }
@@ -82,6 +83,16 @@ class TvDetailViewController: UIViewController {
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
+    }
+    
+    var gradient: CAGradientLayer!
+    
+    func imageGradient() {
+        gradient = CAGradientLayer()
+        gradient.frame = backgroundImage.bounds
+        gradient.colors = [UIColor.white.cgColor, UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
+        gradient.locations = [0, 0.6, 0.8, 1]
+        backgroundImage.layer.mask = gradient
     }
     
     /// Animation for average score
