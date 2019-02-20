@@ -14,13 +14,12 @@ var person_id: Int?
 
 struct Api {
     static let BASE_URL = "https://api.themoviedb.org/3"
-    static let KEY = "Enter Your API KEY Here"
+    static let KEY = "Enter API Key HERE"
     static let SCHEME = "https"
     static let HOST = "api.themoviedb.org"
     static let PATH = "/3"
     
-    //static let smallImagePath = "https://image.tmdb.org/t/p/w185"
-    //static let bigImagePath = "https://image.tmdb.org/t/p/w342"
+    
     static let youtubeThumb = "https://img.youtube.com/vi/"
     static let youtubeLink = "https://www.youtube.com/watch?v="
 }
