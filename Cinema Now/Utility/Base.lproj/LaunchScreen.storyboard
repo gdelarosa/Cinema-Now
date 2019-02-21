@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,14 +20,14 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="J47-QS-1CN">
-                                <rect key="frame" x="95" y="286" width="184" height="157"/>
+                                <rect key="frame" x="95" y="234" width="184" height="98"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cinema Roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20G-fy-RBD">
-                                <rect key="frame" x="70" y="490" width="235" height="45"/>
+                                <rect key="frame" x="16" y="379" width="343" height="74"/>
                                 <fontDescription key="fontDescription" name="MoskExtra-Bold800" family="Mosk" pointSize="39"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -38,11 +38,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J47-QS-1CN" secondAttribute="bottom" constant="335" id="4Xk-F2-FUL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J47-QS-1CN" secondAttribute="trailing" constant="96" id="4rx-L9-1z4"/>
                             <constraint firstItem="J47-QS-1CN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="Tol-aL-6ft"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="20G-fy-RBD" secondAttribute="trailing" constant="70" id="VjG-Qh-vu0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="20G-fy-RBD" secondAttribute="bottom" constant="243" id="WTT-eH-1Wa"/>
-                            <constraint firstItem="J47-QS-1CN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="242" id="Yg0-6i-PNt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="20G-fy-RBD" secondAttribute="trailing" constant="16" id="VjG-Qh-vu0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="20G-fy-RBD" secondAttribute="bottom" constant="214" id="WTT-eH-1Wa"/>
+                            <constraint firstItem="J47-QS-1CN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="214" id="Yg0-6i-PNt"/>
                             <constraint firstItem="20G-fy-RBD" firstAttribute="top" secondItem="J47-QS-1CN" secondAttribute="bottom" constant="47" id="baY-lX-pQr"/>
-                            <constraint firstItem="20G-fy-RBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="qhu-ua-iY6"/>
+                            <constraint firstItem="20G-fy-RBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qhu-ua-iY6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

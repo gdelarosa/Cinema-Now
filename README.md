@@ -19,8 +19,6 @@ You can install and run the app using Xcode 10+ and Swift 4. You must also obtai
 * MVC archticture 
 * URLSession
 
-Currently there are no 3rd party libraries but I plan to add a few as I go along. Please make sure you are using the latest Swift and Xcode to avoid any issues when cloning the project. 
-
 ### Contributing
 If you would like to contribute to this app feel free to create fork this project. Please make sure:  
 *  That you are working with the latest Xcode and Swift
