@@ -1,6 +1,11 @@
 # Cinema-Now 
 
+
+![GitHub](https://img.shields.io/badge/Language-Swift-orange.svg) ![GitHub](https://img.shields.io/github/license/gdelarosa/Cinema-Now.svg) ![GitHub](https://img.shields.io/badge/Platform-iOS%2012.1%2B-lightgrey.svg) 
+
 ![screen shot 2019-01-30 at 7 18 20 pm](https://user-images.githubusercontent.com/9616943/52028433-d870bb00-24c3-11e9-9c6b-5f05afc9d648.png)
+
+[![button](https://user-images.githubusercontent.com/9616943/53190156-ce6f4300-35bd-11e9-881b-81c41cfaf025.png)](https://itunes.apple.com/us/app/cinema-roll/id1451111548)
 
 Cinema Now let's you easily browse movies and tv shows to learn more about them. 
 
