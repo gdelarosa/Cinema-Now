@@ -1,4 +1,4 @@
-# Cinema-Now 
+# Cinema-Roll 
 
 
 ![GitHub](https://img.shields.io/badge/Language-Swift-orange.svg) ![GitHub](https://img.shields.io/github/license/gdelarosa/Cinema-Now.svg) ![GitHub](https://img.shields.io/badge/Platform-iOS%2012.1%2B-lightgrey.svg) 
