@@ -24,18 +24,5 @@ You can install and run the app using Xcode 10+ and Swift 4. You must also obtai
 * MVC archticture 
 * URLSession
 
-### Contributing
-If you would like to contribute to this app feel free to create fork this project. Please make sure:  
-*  That you are working with the latest Xcode and Swift
-*  Your code compiles, you write documentation, and  try to maintain a clean code style.
-*  You label pull requests properly. For example, labelling the requet as "Ready for Review" would mean you are ready for your code to be checked. 
-* You are aware your submitted code is under the MIT license for this project. 
-
-If you are not familiar with TMDB API check it out here: https://developers.themoviedb.org/3/getting-started/introduction.  
-
-### Issues
-I've created a few issues that I have labelled. Feel free to create any issues yourself with a description and images if need be. If you would like to tackle one of the issues I have posted just assign yourself to it and leave comments as you go along. 
-
-
 ### License
 This project is licensed under the MIT License - see the LICENSE.md file for details. 
