@@ -14,7 +14,7 @@ var person_id: Int?
 
 struct Api {
     static let BASE_URL = "https://api.themoviedb.org/3"
-    static let KEY = "Insert API KEY HERE"
+    static let KEY = "5042406e2d9a46f8e330a6b89e997af4"
     static let SCHEME = "https"
     static let HOST = "api.themoviedb.org"
     static let PATH = "/3"

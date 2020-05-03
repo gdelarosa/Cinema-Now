@@ -360,9 +360,11 @@
 				TargetAttributes = {
 					777310D721E7E98300409884 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 					777310EB21E7E98600409884 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 777310D721E7E98300409884;
 					};
 				};
@@ -625,7 +627,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ginadlr.Cinema-Now";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -643,7 +645,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ginadlr.Cinema-Now";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -663,7 +665,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ginadlr.Cinema-NowTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cinema Roll.app/Cinema Roll";
 			};
@@ -684,7 +686,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ginadlr.Cinema-NowTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cinema Roll.app/Cinema Roll";
 			};

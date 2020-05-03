@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Cinema_Now
+@testable import Cinema_Roll
 
 class Cinema_NowTests: XCTestCase {
 

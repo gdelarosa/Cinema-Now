@@ -21,7 +21,6 @@ enum Genre: Int {
     case history = 36
     case horror = 27
     case music = 10402
-    //case mystery
     case romance = 10749
     case scienceFiction = 878
     case tVMovie = 10770
@@ -49,8 +48,7 @@ enum Genre: Int {
         case .thriller: return "thriller"
         case .war: return "war"
         case .western: return "western"
-        default:
-            return "Empty"
+       
         }
     }
     
