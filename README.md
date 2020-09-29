@@ -18,7 +18,7 @@ Cinema Now let's you easily browse movies and tv shows to learn more about them.
 You can install and run the app using Xcode 10+ and Swift 4. You must also obtain your own API Key from TMDB site. Not all features are complete so you may run across some odd ends for now. 
 
 ### Built With
-* Swift 4.2
+* Swift 5
 * Xcode 10.1
 * Storyboard + Autolayout
 * MVC archticture 
