@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NwV-Ib-XZF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NwV-Ib-XZF">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -109,7 +109,7 @@
                                     <outlet property="delegate" destination="1WA-f8-olI" id="WVx-bi-hFV"/>
                                 </connections>
                             </collectionView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EW5-QQ-Znj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EW5-QQ-Znj">
                                 <rect key="frame" x="0.0" y="323" width="375" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
@@ -183,8 +183,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="J9w-te-XVK"/>
+                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ncs-TE-BAa"/>
@@ -273,8 +273,8 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="YBu-In-Pjl"/>
+                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="TV" image="TV" id="HIo-V9-fYT"/>
                     <connections>
@@ -358,6 +358,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="37I-Es-aOb"/>
                         <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="cXV-2S-lSO" firstAttribute="leading" secondItem="37I-Es-aOb" secondAttribute="leading" id="A1O-Kh-u6v"/>
@@ -369,7 +370,6 @@
                             <constraint firstItem="qXu-tp-xoJ" firstAttribute="top" secondItem="hao-LX-bxW" secondAttribute="top" constant="43" id="nhw-Cz-CYF"/>
                             <constraint firstItem="cXV-2S-lSO" firstAttribute="top" secondItem="qXu-tp-xoJ" secondAttribute="bottom" id="ooq-Gy-gS7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="37I-Es-aOb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="search" id="vNC-sl-eRv"/>
                     <connections>
@@ -425,7 +425,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MT-CJ-JIS">
-                                <rect key="frame" x="32" y="48" width="86" height="39"/>
+                                <rect key="frame" x="32" y="48" width="91" height="39"/>
                                 <fontDescription key="fontDescription" name="MoskExtra-Bold800" family="Mosk" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -435,6 +435,7 @@
                                 <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qqk-yA-psc"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mHk-fI-RrD" firstAttribute="leading" secondItem="bt6-DV-zsk" secondAttribute="trailing" constant="26" id="13T-jX-QiS"/>
@@ -458,7 +459,6 @@
                             <constraint firstItem="8wb-7i-ucN" firstAttribute="trailing" secondItem="PhC-Mb-hmG" secondAttribute="trailing" id="sUZ-Xb-3bX"/>
                             <constraint firstItem="PhC-Mb-hmG" firstAttribute="top" secondItem="bt6-DV-zsk" secondAttribute="bottom" constant="20" id="z5h-vD-608"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Qqk-yA-psc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="info" id="nwG-xX-zRN"/>
                 </viewController>
@@ -482,7 +482,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5U5-0H-knO">
-                                <rect key="frame" x="16" y="44" width="20" height="20"/>
+                                <rect key="frame" x="16" y="61" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="HTu-p2-bfO"/>
                                     <constraint firstAttribute="height" constant="20" id="rb8-kk-zVV"/>
@@ -564,12 +564,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="JKU-hl-W2L"/>
                         <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="5U5-0H-knO" firstAttribute="leading" secondItem="JKU-hl-W2L" secondAttribute="leading" constant="16" id="OUV-e3-3cR"/>
-                            <constraint firstItem="5U5-0H-knO" firstAttribute="top" secondItem="JKU-hl-W2L" secondAttribute="top" id="yvP-Z9-iPZ"/>
+                            <constraint firstItem="5U5-0H-knO" firstAttribute="top" secondItem="JKU-hl-W2L" secondAttribute="top" constant="17" id="yvP-Z9-iPZ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="JKU-hl-W2L"/>
                     </view>
                     <connections>
                         <outlet property="actorCredits" destination="ze3-Wv-Jk1" id="11N-uY-G2b"/>
@@ -591,20 +591,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view tag="101" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ieu-tm-qGn" customClass="CircularProgressView" customModule="Cinema_Roll" customModuleProvider="target">
-                                <rect key="frame" x="326" y="294" width="70" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jnr-qf-OXg">
-                                        <rect key="frame" x="-8" y="27" width="86" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nl-B2-y8Y">
                                 <rect key="frame" x="0.0" y="0.0" width="457" height="296"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -684,17 +670,31 @@
                                     <outlet property="delegate" destination="G7z-jv-72G" id="XUD-cu-fJv"/>
                                 </connections>
                             </collectionView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdB-nw-dFB">
-                                <rect key="frame" x="0.0" y="438" width="414" height="179"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdB-nw-dFB">
+                                <rect key="frame" x="0.0" y="373" width="414" height="244"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="MoskNormal400" family="Mosk Normal 400" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view tag="101" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ieu-tm-qGn" customClass="CircularProgressView" customModule="Cinema_Roll" customModuleProvider="target">
+                                <rect key="frame" x="325" y="238" width="70" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jnr-qf-OXg">
+                                        <rect key="frame" x="-8" y="27" width="86" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="se8-fE-Pfi"/>
+                        <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="VSa-A5-Gsf"/>
@@ -1088,6 +1088,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="xTW-Ws-61Z"/>
                         <color key="backgroundColor" red="0.15297964219999999" green="0.14901810879999999" blue="0.14901974800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jV8-b2-bLI" firstAttribute="top" secondItem="XH5-Va-9tJ" secondAttribute="bottom" id="Aha-gL-hyl"/>
@@ -1095,7 +1096,6 @@
                             <constraint firstItem="XH5-Va-9tJ" firstAttribute="top" secondItem="rwe-vj-Jo2" secondAttribute="top" constant="-74" id="wTd-Sn-3gU"/>
                             <constraint firstItem="XH5-Va-9tJ" firstAttribute="leading" secondItem="rwe-vj-Jo2" secondAttribute="leading" id="xhQ-KS-dce"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xTW-Ws-61Z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Movies" image="film-reel" id="VE9-hw-MQc">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
